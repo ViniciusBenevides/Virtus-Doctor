@@ -1,0 +1,5 @@
+@property --x {
+    syntax: '<percentage>';
+    initial-value: 100%;
+    inherits: false;
+}
