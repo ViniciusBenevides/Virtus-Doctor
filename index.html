@@ -32,9 +32,158 @@
             height: 100%;
         }
 
+        .insight-card-title {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to bottom right,
+                    white 30%,
+                    #d5d8f6 80%,
+                    #fdf7fe 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-family: inherit;
+            color: transparent;
+            position: relative;
+            font-size: 45px;
+            justify-self: center;
+            font-weight: 600;
+            margin-right: -23px;
+            width: fit-content;
+            margin-bottom: 10px;
+        }
+
+        .card-background {
+            background: url(images/WcrHWFTN7cBpOOCJ3uhVkpsJXQ.svg);
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .insight-top-line {
+            background-color: #3362ff;
+            height: 1px;
+            left: calc(49.80% - 34px / 2);
+            position: absolute;
+            top: -1px;
+            width: 34px;
+        }
+
+        .insight-cards {
+            margin-top: 80px;
+            display: grid;
+            width: 100%;
+            gap: 20px;
+            grid-template-columns: repeat(3, minmax(50px, 1fr));
+        }
+
+        .insight-card {
+            border: 1px solid #131839;
+            align-items: center;
+            aspect-ratio: 1.75625 / 1;
+            background-color: #00041f;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 2px;
+            overflow: hidden;
+            padding: 20px 10px;
+            position: relative;
+            width: 100%;
+            transition: ease 1.5s;
+        }
+
+        .insight-card:hover {
+            border: 1px solid #3362ff;
+            transform: scale(1.02);
+            cursor: pointer;
+            transform: translateY(-15px);
+        }
+
+        .insight-card2 {
+            aspect-ratio: 1.75625 / 1;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .center-insight {
+            width: 1200px;
+            gap: 32px;
+            position: absolute;
+            z-index: 999;
+        }
+
+        .right-shock {
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: color-dodge;
+            background: url(/images/XUV3B79RFYJmks4RdcuhqtsLo1k.svg);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        .right-shock#left {
+            mix-blend-mode: color-dodge;
+            background: url(/images/JmnNBcgGwOAnsO70g5notRa1v1k.svg);
+            background-repeat: no-repeat;
+        }
+
+        .right-light-box {
+            height: 527px;
+            mix-blend-mode: color-dodge;
+            position: absolute;
+            right: 0;
+            top: 2px;
+            width: 74%;
+        }
+
+        .left-light-box {
+            height: 527px;
+            mix-blend-mode: color-dodge;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 34%;
+        }
+
+        .blue-light-box {
+            display: contents;
+        }
+
+        .insight-background {
+            background-color: #00020f;
+        }
+
+        .insight-section {
+            align-items: center;
+            background: radial-gradient(50% 100% at 50% 0%, #00041f 0%, #00020f 74%);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 999;
+            width: 100%;
+            gap: 30px;
+            height: 600px;
+            padding: 60px 0px;
+        }
+
+        .insight-section-line {
+            background: radial-gradient(50% 50% at 50% 50%, #131839 0%, rgba(19, 24, 57, 0) 100%);
+            height: 1px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
         .project-background {
             background-color: #00020f;
             padding-bottom: 80px;
+            margin-top: -4px;
+            position: relative;
+            z-index: 99;
         }
 
         .video-project {
@@ -121,8 +270,9 @@
         }
 
         .our-works {
+            margin-top: -3px;
             position: absolute;
-            z-index: -4;
+            z-index: 4;
             height: 280px;
             width: 100%;
             background: linear-gradient(to bottom, #00020f, #00020f);
@@ -142,7 +292,8 @@
         #swiper-section {
             background: linear-gradient(to bottom, #00020f, #00020f);
             position: relative;
-            margin-top: -1px;
+            z-index: 99;
+            margin-top: -2px;
         }
 
         .upper-hero-text#results {
@@ -232,6 +383,36 @@
             font-size: 18px;
             text-wrap: wrap;
             font-weight: 400;
+            color: #6D7792;
+            line-height: 1.4;
+        }
+
+        .center-text#description-cards-insight {
+            text-shadow: 0 0 black;
+            position: relative;
+            width: 100%;
+            justify-self: anchor-center;
+            text-align: center;
+            margin-top: 0px;
+            font-family: inherit;
+            font-size: 18px;
+            text-wrap: wrap;
+            font-weight: 400;
+            color: #6D7792;
+            line-height: 1.4;
+        }
+
+        .center-text#description-cards-insights {
+            text-shadow: 0 0 black;
+            position: relative;
+            width: 100%;
+            justify-self: anchor-center;
+            text-align: center;
+            margin-top: 20px;
+            font-family: inherit;
+            font-size: 14px;
+            text-wrap: wrap;
+            font-weight: 300;
             color: #6D7792;
             line-height: 1.4;
         }
@@ -878,7 +1059,7 @@
             justify-self: anchor-center;
             backdrop-filter: blur(10px);
             border: 0.9px solid #FFFFFF1A;
-            z-index: 100;
+            z-index: 1000;
             border-radius: 70px;
             font-size: 1rem;
             font-weight: 500;
@@ -1362,13 +1543,14 @@
         }
 
         #stars2 {
+            top: 300px;
             width: 1px;
             height: 1px;
             background: transparent;
             position: absolute;
             pointer-events: none;
             z-index: 1;
-            animation: animStar2 50s linear infinite;
+            animation: animStar2 40s linear infinite;
             box-shadow:
                 324px 42px #fff, 303px 586px #fff, 451px 625px #fff, 36px 1546px #fff, 132px 934px #fff,
                 586px 384px #fff, 164px 527px #fff, 8px 646px #fff, 665px 1357px #fff, 242px 1343px #fff,
@@ -1466,7 +1648,7 @@
             }
 
             to {
-                transform: translateY(-1000px);
+                transform: translateY(-800px);
             }
         }
 
@@ -1481,6 +1663,19 @@
 
         /* Menu */
         @media (max-width: 1220px) {
+            .insight-top-line {
+                top: 1px;
+                width: 40px;
+            }
+
+            .center-insight {
+                width: 90%;
+            }
+
+            .insight-card {
+                overflow: unset;
+            }
+
             .project-card:hover .view-project {
                 margin-left: 25%;
             }
@@ -1705,6 +1900,37 @@
         }
 
         @media (max-width: 768px) {
+            .insight-top-line {
+                top: 1px;
+                width: 43px;
+                left: calc(48.5% - 34px / 2);
+            }
+
+            .right-light-box {
+                width: 54%;
+            }
+
+            .right-shock {
+                background: url(/images/7lbbiPQgUFsItofnEFIKgrdnMXc.svg);
+            }
+
+            .right-shock#left {
+                background: url(/images/M6sO3fA0k60sOnxkNNj581XaE5k.svg);
+            }
+
+            .insight-section {
+                height: 1000px;
+            }
+
+            .insight-cards {
+                margin-top: 40px;
+                display: grid;
+                width: 100%;
+                place-self: center;
+                gap: 30px;
+                grid-template-columns: repeat(1, minmax(50px, 1fr));
+            }
+
             .project-card-under-text {
                 flex-wrap: wrap;
             }
@@ -2330,7 +2556,89 @@
             </a>
         </div>
     </div>
-
+    <div class="insight-background">
+        <div class="insight-section">
+            <div class="insight-section-line"></div>
+            <div class="center-insight">
+                <div class="upper-hero-text" id="results2">
+                    <h1 id="appointment2">
+                        Insights
+                    </h1>
+                </div>
+                <div class="center-text" id="second">
+                    <p>Os números falam</p>
+                </div>
+                <div class="center-text" id="description-our-works">
+                    <p>Estatísticas não mentem: a presença digital é o novo cartão de visita médico.<br> Se você não
+                        aparece on-line, é como se não existisse.</p>
+                </div>
+                <div class="center-text" id="description-our-mobile">
+                    <p>Estatísticas não mentem: a presença digital é o novo cartão de visita médico. Se você não
+                        aparece on-line, é como se não existisse.</p>
+                </div>
+                <div class="insight-cards">
+                    <div class="insight-card">
+                        <div class="insight-card2">
+                            <div class="card-background"></div>
+                            <div class="insight-top-line"></div>
+                        </div>
+                        <div class="insight-card-title">
+                            94%
+                        </div>
+                        <div class="center-text" id="description-cards-insight">
+                            <p>dos pacientes usam avaliações on-line
+                                para considerar um médico.</p>
+                        </div>
+                        <div class="center-text" id="description-cards-insights">
+                            <p>Fonte: inc.com</p>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-card2">
+                            <div class="card-background"></div>
+                            <div class="insight-top-line"></div>
+                        </div>
+                        <div class="insight-card-title">
+                            84%
+                        </div>
+                        <div class="center-text" id="description-cards-insight">
+                            <p>das pessoas confiam nas avaliações
+                                on-line tanto quanto em recomendações pessoais.</p>
+                        </div>
+                        <div class="center-text" id="description-cards-insights">
+                            <p>Fonte: Software Advice</p>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-card2">
+                            <div class="card-background"></div>
+                            <div class="insight-top-line"></div>
+                        </div>
+                        <div class="insight-card-title">
+                            50%
+                        </div>
+                        <div class="center-text" id="description-cards-insight">
+                            <p>de todos os cliques vão para os três
+                                principais resultados de pesquisa do Google.</p>
+                        </div>
+                        <div class="center-text" id="description-cards-insights">
+                            <p>Fonte: Source</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blue-light-box">
+                <div class="right-light-box">
+                    <div class="right-shock"></div>
+                </div>
+            </div>
+            <div class="blue-light-box">
+                <div class="left-light-box">
+                    <div class="right-shock" id="left"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         // Menu mobile
         const menuIcon = document.querySelector('#menu-icon');
@@ -2465,6 +2773,63 @@
         if (cardsContainer) {
             observer.observe(cardsContainer);
         }
+
+        // Adicione esta função ao seu script existente (dentro da tag <script>)
+
+        // Função para animar os números das estatísticas
+        function animateInsightNumbers() {
+            const insightCards = document.querySelectorAll('.insight-card');
+
+            insightCards.forEach(card => {
+                const titleElement = card.querySelector('.insight-card-title');
+                const originalValue = titleElement.textContent.trim();
+
+                // Extrai apenas o número (remove o símbolo %)
+                const numberValue = parseInt(originalValue.replace('%', ''));
+
+                // Configuração da animação
+                const duration = 2000; // 1.5 segundos
+                const startTime = performance.now();
+
+                // Função de atualização
+                const updateNumber = (currentTime) => {
+                    const elapsedTime = currentTime - startTime;
+                    const progress = Math.min(elapsedTime / duration, 1);
+
+                    // Easing function (easeOutQuad)
+                    const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+                    const currentNumber = Math.floor(easedProgress * numberValue);
+                    titleElement.textContent = `${currentNumber}%`;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateNumber);
+                    } else {
+                        titleElement.textContent = originalValue; // Garante o valor exato no final
+                    }
+                };
+
+                // Inicia a animação
+                requestAnimationFrame(updateNumber);
+            });
+        }
+
+        // Observador para iniciar a animação quando a seção de insights estiver visível
+        const insightObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateInsightNumbers();
+                    insightObserver.unobserve(entry.target); // Para de observar após a animação
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observa a seção de insights
+        const insightSection = document.querySelector('.insight-section');
+        if (insightSection) {
+            insightObserver.observe(insightSection);
+        }
+
     </script>
 
     <!-- Incluindo o JavaScript do Swiper -->
