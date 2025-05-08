@@ -32,6 +32,228 @@
             height: 100%;
         }
 
+        .inline-block {
+            max-width: 100%;
+            display: inline-block;
+        }
+
+        .page-wrapper {
+            position: initial;
+        }
+
+        .container {
+            width: 90vw;
+            max-width: 1360px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .margin-bottom-medium {
+            margin-bottom: 32px;
+        }
+
+        .paragraph-large {
+            letter-spacing: -0.02em;
+            font-size: 20px;
+        }
+
+        .section-timeline-heading {
+            background-color: #00020f;
+        }
+
+        .padding-vertical-xlarge {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+        .timeline-main_heading-wrapper {
+            color: #fff;
+            text-align: center;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .timeline_component {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 1120px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            position: relative;
+        }
+
+        .timeline_item {
+            z-index: 2;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 180px 1fr;
+            grid-auto-columns: 1fr;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            display: grid;
+            position: relative;
+        }
+
+        .timeline_left {
+            text-align: right;
+            height: fit-content;
+            align-self: center;
+        }
+
+        .timeline_centre {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .timeline_date-text {
+            letter-spacing: -0.03em;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 1.2;
+            position: sticky;
+            top: 50vh;
+            background: linear-gradient(to bottom right,
+                    white 30%,
+                    #d5d8f6 80%,
+                    #fdf7fe 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .timeline_date-text#mobile {
+            display: none;
+        }
+
+
+
+        .timeline_text {
+            width: 100%;
+            font-size: 18px;
+            font-weight: 400;
+            color: #FFFFff99;
+            line-height: 1.4;
+        }
+
+        .timeline_text_box {
+            border-radius: 10px;
+            padding: 38px;
+            background-color: #3363ff13;
+            border: 1px solid #3363ff60;
+        }
+
+        .timeline_circle {
+            background-color: #414141;
+            border-radius: 100%;
+            width: 15px;
+            min-width: 15px;
+            max-width: 15px;
+            height: 15px;
+            min-height: 15px;
+            max-height: 15px;
+            position: sticky;
+        }
+
+        .timeline_progress {
+            z-index: -2;
+            background-color: #414141;
+            width: 3px;
+            height: 100%;
+            position: absolute;
+        }
+
+        .timeline_progress-bar {
+            z-index: -1;
+            background: linear-gradient(to bottom right,
+                    white 30%,
+                    #d5d8f6 80%,
+                    #fdf7fe 100%);
+
+            width: 3px;
+            height: 50vh;
+            position: fixed;
+            inset: 0 auto 50vh;
+        }
+
+        .section-timeline {
+            z-index: -3;
+            background-color: #00020f;
+            position: absolute;
+            width: 100%;
+        }
+
+        .timeline_link {
+            opacity: 0.6;
+            color: #fff;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.3;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            display: flex;
+        }
+
+        .timeline_link:hover {
+            opacity: 1;
+        }
+
+        .link-icon {
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .text-colour-lightgrey {
+            color: #ffffffa6;
+        }
+
+        .overlay-fade-top {
+            background-image: linear-gradient(#00020f, #00020f00);
+            height: 80px;
+            position: absolute;
+            inset: 0% 0% auto;
+        }
+
+        .overlay-fade-bottom {
+            background-image: linear-gradient(to top, #00020f, #00020f00);
+            height: 80px;
+            position: absolute;
+            inset: auto 0% 0%;
+        }
+
+        .our-method-background {
+            display: flex;
+            justify-content: center;
+            background-color: #00020f;
+            height: 300px;
+            width: 100%;
+            align-items: flex-end;
+        }
+
+        .our-method {
+            background: url(images/fXXrEnWUYP7siQQR1XB0guYmQ.svg);
+            width: 700px;
+            padding-top: 110px;
+            height: 300px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: center;
+            background-position-x: center;
+        }
+
         .insight-card-title {
             display: flex;
             justify-content: center;
@@ -1592,6 +1814,55 @@
                 388px 1412px #fff, 696px 1654px #fff
         }
 
+        #stars3 {
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+            animation: animStar3 40s linear infinite;
+            box-shadow:
+                324px 42px #fff, 303px 586px #fff, 451px 625px #fff, 36px 1546px #fff, 132px 934px #fff,
+                586px 384px #fff, 164px 527px #fff, 8px 646px #fff, 665px 1357px #fff, 242px 1343px #fff,
+                636px 959px #fff, 304px 686px #fff, 614px 751px #fff, 355px 335px #fff, 90px 60px #fff,
+                524px 932px #fff, 214px 413px #fff, 378px 125px #fff, 308px 834px #fff,
+                561px 137px #fff, 343px 739px #fff, 576px 1903px #fff, 297px 1873px #fff,
+                192px 162px #fff, 59px 453px #fff, 73px 1507px #fff, 654px 14px #fff,
+                494px 171px #fff, 142px 388px #fff, 572px 215px #fff, 329px 469px #fff, 275px 316px #fff,
+                625px 58px #fff, 166px 942px #fff, 51px 307px #fff, 416px 170px #fff, 572px 219px #fff,
+                218px 8px #fff, 348px 1334px #fff, 469px 413px #fff, 240px 942px #fff, 236px 1514px #fff,
+                73px 1633px #fff, 671px 1301px #fff, 112px 1084px #fff, 687px 1115px #fff, 11px 523px #fff,
+                429px 7px #fff, 157px 297px #fff, 545px 635px #fff, 52px 1080px #fff, 9px 309px #fff,
+                387px 703px #fff, 290px 259px #fff, 295px 598px #fff, 34px 1922px #fff, 467px 369px #fff,
+                12px 512px #fff, 617px 1410px #fff, 682px 577px #fff, 439px 327px #fff, 673px 129px #fff,
+                37px 1353px #fff, 416px 18px #fff, 187px 344px #fff, 79px 761px #fff, 354px 552px #fff,
+                161px 1784px #fff, 614px 251px #fff, 17px 212px #fff, 179px 996px #fff, 467px 1208px #fff,
+                374px 275px #fff, 357px 552px #fff, 402px 1858px #fff, 667px 1257px #fff, 275px 316px #fff,
+                407px 863px #fff, 461px 736px #fff, 284px 1608px #fff, 103px 430px #fff, 70px 1098px #fff,
+                309px 1292px #fff, 65px 473px #fff, 402px 1576px #fff, 35px 622px #fff, 164px 666px #fff,
+                270px 1297px #fff, 440px 865px #fff, 272px 1249px #fff, 190px 1646px #fff, 635px 801px #fff,
+                226px 455px #fff, 237px 1264px #fff, 333px 1392px #fff, 467px 548px #fff, 243px 156px #fff,
+                483px 1616px #fff, 581px 1084px #fff, 107px 732px #fff, 166px 1493px #fff, 540px 467px #fff,
+                130px 529px #fff, 33px 1980px #fff, 528px 710px #fff, 505px 1480px #fff, 292px 357px #fff,
+                384px 1746px #fff, 392px 1098px #fff, 647px 548px #fff, 390px 1498px #fff, 192px 1472px #fff,
+                313px 1642px #fff, 281px 1849px #fff, 435px 1191px #fff, 411px 944px #fff, 210px 636px #fff,
+                516px 364px #fff, 504px 204px #fff, 657px 34px #fff, 248px 180px #fff, 667px 1562px #fff,
+                695px 841px #fff, 87px 167px #fff, 607px 1368px #fff, 172px 1350px #fff, 213px 972px #fff,
+                285px 1806px #fff, 345px 1190px #fff, 478px 1433px #fff, 579px 245px #fff, 408px 1352px #fff,
+                665px 286px #fff, 493px 1720px #fff, 637px 1140px #fff, 764px 324px #fff, 36px 1381px #fff,
+                242px 1471px #fff, 654px 797px #fff, 752px 23px #fff, 21px 412px #fff, 335px 1945px #fff,
+                264px 583px #fff, 158px 1311px #fff, 528px 164px #fff, 166px 980px #fff, 95px 797px #fff,
+                469px 939px #fff, 312px 1293px #fff, 355px 570px #fff, 276px 913px #fff, 266px 156px #fff,
+                455px 655px #fff, 236px 1329px #fff, 146px 1228px #fff, 36px 1063px #fff, 288px 1489px #fff,
+                390px 1071px #fff, 411px 1036px #fff, 291px 271px #fff, 518px 101px #fff, 145px 1320px #fff,
+                69px 1397px #fff, 257px 725px #fff, 183px 102px #fff, 595px 950px #fff, 175px 1179px #fff,
+                41px 61px #fff, 402px 691px #fff, 72px 496px #fff, 88px 806px #fff, 244px 1118px #fff,
+                634px 383px #fff, 468px 194px #fff, 468px 1294px #fff, 529px 733px #fff, 226px 506px #fff,
+                651px 878px #fff, 238px 1967px #fff, 484px 1856px #fff, 112px 953px #fff, 100px 1026px #fff,
+                388px 1412px #fff, 696px 1654px #fff
+        }
+
         /* Animação dos links do menu */
         @keyframes navLinkFade {
             from {
@@ -1649,6 +1920,16 @@
 
             to {
                 transform: translateY(-800px);
+            }
+        }
+
+        @keyframes animStar3 {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(-1000px);
             }
         }
 
@@ -1900,6 +2181,69 @@
         }
 
         @media (max-width: 768px) {
+            .timeline_item {
+                padding-top: 21px;
+                padding-bottom: 21px;
+            }
+
+            .timeline_text_box {
+                padding: 20px;
+                padding-bottom: 34.4px;
+                padding-top: 28px;
+            }
+
+            .paragraph-large {
+                font-size: 18px;
+            }
+
+            .padding-vertical-xlarge {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+
+            .timeline_item {
+                grid-template-columns: 40px 1fr;
+                width: 100%;
+            }
+
+            .timeline_left {
+                text-align: left;
+                grid-area: 1 / 2 / 2 / 3;
+            }
+
+            .timeline_centre {
+                justify-content: flex-start;
+                grid-area: 1 / 1 / 3 / 2;
+            }
+
+            .timeline_right {
+                grid-area: span 1 / span 1 / span 1 / span 1;
+            }
+
+            .timeline_date-text {
+                display: none;
+            }
+
+            .timeline_date-text#mobile {
+                font-size: 20px;
+                display: block;
+                position: unset;
+                margin-bottom: 16px;
+                width: fit-content;
+            }
+
+            .timeline_text {
+                font-size: 16px;
+            }
+
+            .timeline_progress {
+                left: 6px;
+            }
+
+            .margin-bottom-xlarge {
+                margin-bottom: 48px;
+            }
+
             .insight-top-line {
                 top: 1px;
                 width: 43px;
@@ -1919,7 +2263,7 @@
             }
 
             .insight-section {
-                height: 1000px;
+                height: 1050px;
             }
 
             .insight-card {
@@ -2643,6 +2987,120 @@
             </div>
         </div>
     </div>
+    <div class="our-method-background">
+        <div class="our-method">
+            <!-- <div id="stars3"></div> -->
+            <div class="upper-hero-text" id="results2">
+                <h1 id="appointment2">
+                    Metódo
+                </h1>
+            </div>
+            <div class="center-text" id="second">
+                <p>Nossas etapas</p>
+            </div>
+            <div class="center-text" id="description-our-works">
+                <p>Não improvisamos: seguimos um método comprovado, do diagnóstico à entrega,<br>
+                    com transparência, prazos rígidos e um atendimento eficaz.</p>
+            </div>
+            <div class="center-text" id="description-our-mobile">
+                <p>Não improvisamos: seguimos um método comprovado, do diagnóstico à entrega,
+                    com transparência, prazos rígidos e um atendimento eficaz.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <div class="section-timeline">
+            <div class="container">
+                <div class="timeline_component">
+                    <div class="timeline_progress">
+                        <div class="timeline_progress-bar"></div>
+                    </div>
+                    <div class="timeline_item">
+                        <div class="timeline_left">
+                            <div class="timeline_date-text">Primeiro contato</div>
+                        </div>
+                        <div class="timeline_centre">
+                            <div class="timeline_circle"></div>
+                        </div>
+                        <div class="timeline_right">
+                            <div class="margin-bottom-xlarge">
+                                <div class="timeline_text_box">
+                                    <div class="timeline_text">
+                                        <div class="timeline_date-text" id="mobile">Primeiro contato</div>
+                                        Identificamos suas necessidades e mostramos a demanda que existe para sua
+                                        especialidade na sua localidade.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline_item">
+                        <div class="timeline_left">
+                            <div class="timeline_date-text">Estratégia </div>
+                        </div>
+                        <div class="timeline_centre">
+                            <div class="timeline_circle"></div>
+                        </div>
+                        <div class="timeline_right">
+                            <div class="margin-bottom-medium">
+                                <div class="timeline_text_box">
+                                    <div class="timeline_text">
+                                        <div class="timeline_date-text" id="mobile">Estratégia</div>
+                                        Após análise de viabilidade, apresentaremos a melhor estratégia para o seu
+                                        cenário.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline_item">
+                        <div class="timeline_left">
+                            <div class="timeline_date-text">Aprovação</div>
+                        </div>
+                        <div class="timeline_centre">
+                            <div class="timeline_circle"></div>
+                        </div>
+                        <div class="timeline_right">
+                            <div class="margin-bottom-medium">
+                                <div class="timeline_text_box">
+                                    <div class="timeline_text">
+                                        <div class="timeline_date-text" id="mobile">Aprovação</div>
+                                        Daremos início a nossa parceria. Seguiremos um cronograma de etapas, sempre
+                                        respeitando a sua total satisfação em cada detalhe do seu projeto de marketing.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline_item">
+                        <div class="timeline_left">
+                            <div class="timeline_date-text">Atendimento</div>
+                        </div>
+                        <div class="timeline_centre">
+                            <div class="timeline_circle"></div>
+                        </div>
+                        <div class="timeline_right">
+                            <div class="margin-bottom-medium">
+                                <div class="timeline_text_box">
+                                    <div class="timeline_text">
+                                        <div class="timeline_date-text" id="mobile">Atendimento</div>
+                                        Nosso atendimento é excepcional. Somos rápidos e corteses, gostamos que tudo
+                                        fique 1.000% alinhado, transparente e sempre buscamos a sua total satisfação
+                                        aliado a ENTREGA de RESULTADOS.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay-fade-top"></div>
+                    <div class="overlay-fade-bottom"></div>
+                </div>
+            </div>
+
+            <div style="height: 50vh;"></div>
+        </div>
+    </div>
+
     <script>
         // Menu mobile
         const menuIcon = document.querySelector('#menu-icon');
@@ -2833,6 +3291,64 @@
         if (insightSection) {
             insightObserver.observe(insightSection);
         }
+
+        function checkCircleProgressPosition() {
+            const timelineItems = document.querySelectorAll('.timeline_item');
+            const progressBar = document.querySelector('.timeline_progress-bar');
+
+            const progressRect = progressBar.getBoundingClientRect();
+            const progressStartY = progressRect.top + window.scrollY;
+            const progressHeight = progressRect.height;
+
+            timelineItems.forEach(item => {
+                const circle = item.querySelector('.timeline_circle');
+                const textBox = item.querySelector('.timeline_text_box');
+                const text = item.querySelector('.timeline_text');
+
+                const circleRect = circle.getBoundingClientRect();
+                const circleY = circleRect.top + window.scrollY;
+
+                if (circleY >= progressStartY && circleY <= (progressStartY + progressHeight)) {
+                    circle.classList.add('active-circle');
+                    textBox.classList.add('active-box');
+                    text.classList.add('active-text');
+                } else {
+                    circle.classList.remove('active-circle');
+                    textBox.classList.remove('active-box');
+                    text.classList.remove('active-text');
+                }
+            });
+
+            requestAnimationFrame(checkCircleProgressPosition);
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+    .timeline_circle.active-circle {
+        background: linear-gradient(to bottom right, white 30%, #d5d8f6 80%, #fdf7fe 100%) !important;
+        transition: all 0.7s ease-in-out;
+    }
+    
+    .timeline_text_box.active-box {
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        transition: all 0.7s ease-in-out;
+    }
+    
+    .timeline_text.active-text {
+        color: #ffffffe6 !important;
+        text-shadow: none !important;
+        transition: all 0.7s ease-in-out;
+    }
+`;
+        document.head.appendChild(style);
+
+        window.addEventListener('load', () => {
+            setTimeout(checkCircleProgressPosition, 1000);
+        });
+
+        window.addEventListener('resize', () => {
+            checkCircleProgressPosition();
+        });
 
     </script>
 
