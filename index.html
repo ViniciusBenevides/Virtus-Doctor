@@ -32,6 +32,37 @@
             height: 100%;
         }
 
+        .gif {
+            background: url(images/google.gif);
+            height: 40px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .our-icons {
+            margin-top: 270px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 600px;
+            background-color: #00020f;
+        }
+
+        .our-icons-1200 {
+            width: 1200px;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .our-icons-300 {
+            width: 25%;
+            height: 320px;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+
         .inline-block {
             max-width: 100%;
             display: inline-block;
@@ -39,10 +70,11 @@
 
         .page-wrapper {
             position: initial;
+            height: 1300px;
         }
 
         .container {
-            width: 90vw;
+            width: 90%;
             max-width: 1360px;
             margin-left: auto;
             margin-right: auto;
@@ -143,8 +175,12 @@
         .timeline_text_box {
             border-radius: 10px;
             padding: 38px;
-            background-color: #3363ff13;
-            border: 1px solid #3363ff60;
+            border: 1px solid rgb(19, 24, 57);
+            background: url(images/Vy5fY5tvzYvO3kc3PMsfNrzzvDY.svg);
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-color: #00041F;
         }
 
         .timeline_circle {
@@ -577,6 +613,14 @@
             margin: 10px;
             text-align: unset;
             font-size: 22px;
+        }
+
+        .center-text#fourth {
+            text-align: unset;
+            text-wrap: auto;
+            width: fit-content;
+            font-size: 20px;
+            margin-top: 0px;
         }
 
         .center-text#description {
@@ -1821,7 +1865,7 @@
             position: absolute;
             pointer-events: none;
             z-index: 1;
-            animation: animStar3 10s linear infinite;
+            animation: animStar3 5s linear infinite;
             box-shadow:
                 324px 42px #fff, 90px 60px #fff, 378px 125px #fff, 192px 162px #fff, 654px 14px #fff,
                 494px 171px #fff, 572px 215px #fff, 625px 58px #fff, 416px 170px #fff, 572px 219px #fff,
@@ -1916,7 +1960,7 @@
             }
 
             to {
-                transform: translateY(-400px);
+                transform: translateY(-300px);
             }
         }
 
@@ -2168,6 +2212,18 @@
         }
 
         @media (max-width: 768px) {
+            .home-line {
+                margin-top: 110px;
+            }
+
+            .our-icons {
+                margin-top: 230px;
+            }
+
+            .page-wrapper {
+                height: 1200px;
+            }
+
             .timeline_item {
                 padding-top: 21px;
                 padding-bottom: 21px;
@@ -2425,6 +2481,7 @@
                 flex-direction: column;
                 width: 100%;
                 gap: 20px;
+                margin-top: 20px;
             }
 
             .header {
@@ -2539,6 +2596,12 @@
                 }
             }
 
+        }
+
+        @media (max-width: 400px) {
+            .home-line {
+                margin-top: 80px;
+            }
         }
     </style>
 </head>
@@ -3045,6 +3108,7 @@
                                         Identificamos suas necessidades e mostramos a demanda que existe para sua
                                         especialidade na sua localidade.
                                     </div>
+                                    <div class="timeline_text_box2"></div>
                                 </div>
                             </div>
                         </div>
@@ -3111,8 +3175,45 @@
                     <div class="overlay-fade-bottom"></div>
                 </div>
             </div>
+            <div style="height: 10vh; background-color: #00020f;"></div>
+        </div>
+    </div>
+    <div class="our-works">
+        <div class="dark-blue-rainbow">
+            <div id="stars3"></div>
+            <div id="stars4"></div>
+            <div class="upper-hero-text" id="results2">
+                <h1 id="appointment2">
+                    Serviços
+                </h1>
+            </div>
+            <div class="center-text" id="second">
+                <p>Nossas soluções</p>
+            </div>
+            <div class="center-text" id="description-our-works">
+                <p>Criamos marcas do zero, desenvolvemos sites que vendem, impulsionamos negócios<br> com anúncios
+                    inteligentes e geramos engajamento no Instagram.</p>
+            </div>
+            <div class="center-text" id="description-our-mobile">
+                <p>Criamos marcas do zero, desenvolvemos sites que vendem, impulsionamos negócios com anúncios
+                    inteligentes e geramos engajamento no Instagram.</p>
+            </div>
+        </div>
+    </div>
+    <div class="our-icons">
+        <div class="our-icons-1200">
+            <div class="our-icons-300">
 
-            <div style="height: 10vh;"></div>
+            </div>
+            <div class="our-icons-300">
+
+            </div>
+            <div class="our-icons-300">
+
+            </div>
+            <div class="our-icons-300">
+
+            </div>
         </div>
     </div>
 
@@ -3339,22 +3440,22 @@
 
         const style = document.createElement('style');
         style.textContent = `
-    .timeline_circle.active-circle {
-        background: linear-gradient(to bottom right, white 30%, #d5d8f6 80%, #fdf7fe 100%) !important;
-        transition: all 0.7s ease-in-out;
-    }
-    
-    .timeline_text_box.active-box {
-        border-color: rgba(255, 255, 255, 0.8) !important;
-        transition: all 0.7s ease-in-out;
-    }
-    
-    .timeline_text.active-text {
-        color: #ffffffe6 !important;
-        text-shadow: none !important;
-        transition: all 0.7s ease-in-out;
-    }
-`;
+            .timeline_circle.active-circle {
+                background: linear-gradient(to bottom right, white 30%, #d5d8f6 80%, #fdf7fe 100%) !important;
+                transition: all 0.7s ease-in-out;
+            }
+            
+            .timeline_text_box.active-box {
+                border-color: rgba(255, 255, 255, 0.8) !important;
+                transition: all 0.7s ease-in-out;
+            }
+            
+            .timeline_text.active-text {
+                color: #ffffffe6 !important;
+                text-shadow: none !important;
+                transition: all 0.7s ease-in-out;
+            }
+        `;
         document.head.appendChild(style);
 
         window.addEventListener('load', () => {
