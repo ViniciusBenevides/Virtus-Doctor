@@ -3,3 +3,396 @@
     initial-value: 100%;
     inherits: false;
 }
+
+body {
+    --background-color: #18181B;
+    --text-color: #A1A1AA;
+
+    --card-background-color: rgba(0, 2, 15, .015);
+    --card-border-color: rgb(255, 255, 255);
+    --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+    --card-box-shadow-1-y: 3px;
+    --card-box-shadow-1-blur: 6px;
+    --card-box-shadow-2: rgba(0, 0, 0, 0.1);
+    --card-box-shadow-2-y: 8px;
+    --card-box-shadow-2-blur: 15px;
+    --card-label-color: #FFFFFF;
+    --card-icon-color: #D4D4D8;
+    --card-icon-background-color: rgba(255, 255, 255, 0.08);
+    --card-icon-border-color: rgba(255, 255, 255, 0.12);
+    --card-shine-opacity: .1;
+    --card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #4c54ee 25deg, rgba(105, 107, 234, 0.18) 295deg, rgba(87, 81, 194, 0) 360deg);
+    --card-line-color: rgb(14, 18, 46, 1);
+    --card-tile-color: rgba(30, 16, 185, 0.15);
+
+    --card-hover-border-color: rgb(39, 46, 105, 0.5);
+    --card-hover-box-shadow-1: rgba(0, 0, 0, 0.04);
+    --card-hover-box-shadow-1-y: 5px;
+    --card-hover-box-shadow-1-blur: 10px;
+    --card-hover-box-shadow-2: rgba(0, 0, 0, 0.3);
+    --card-hover-box-shadow-2-y: 15px;
+    --card-hover-box-shadow-2-blur: 25px;
+    --card-hover-icon-color: rgb(14, 18, 46, 1);
+    --card-hover-icon-background-color: rgba(30, 16, 185, 0.1);
+    --card-hover-icon-border-color: rgba(255, 255, 255, 0.4);
+
+    --blur-opacity: .01;
+}
+
+body.light {
+    --background-color: #FAFAFA;
+    --text-color: #52525B;
+
+    --card-background-color: transparent;
+    --card-border-color: rgba(24, 24, 27, 0.08);
+    --card-box-shadow-1: rgba(24, 24, 27, 0.02);
+    --card-box-shadow-1-y: 3px;
+    --card-box-shadow-1-blur: 6px;
+    --card-box-shadow-2: rgba(24, 24, 27, 0.04);
+    --card-box-shadow-2-y: 2px;
+    --card-box-shadow-2-blur: 7px;
+    --card-label-color: #18181B;
+    --card-icon-color: #18181B;
+    --card-icon-background-color: rgba(24, 24, 27, 0.04);
+    --card-icon-border-color: rgba(24, 24, 27, 0.1);
+    --card-shine-opacity: .3;
+    --card-shine-gradient: conic-gradient(from 225deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #5442c7 25deg, #EDFAF6 285deg, #FFFFFF 345deg, rgba(71, 75, 209, 0) 360deg);
+    --card-line-color: #E9E9E7;
+    --card-tile-color: rgba(80, 87, 213, 0.08);
+
+    --card-hover-border-color: rgba(24, 24, 27, 0.15);
+    --card-hover-box-shadow-1: rgba(24, 24, 27, 0.05);
+    --card-hover-box-shadow-1-y: 3px;
+    --card-hover-box-shadow-1-blur: 6px;
+    --card-hover-box-shadow-2: rgba(24, 24, 27, 0.1);
+    --card-hover-box-shadow-2-y: 8px;
+    --card-hover-box-shadow-2-blur: 15px;
+    --card-hover-icon-color: #18181B;
+    --card-hover-icon-background-color: rgba(24, 24, 27, 0.04);
+    --card-hover-icon-border-color: rgba(24, 24, 27, 0.34);
+
+    --blur-opacity: .1;
+}
+
+body.toggle .grid * {
+    transition-duration: 0s !important;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 276px);
+    grid-gap: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.card22 {
+    box-shadow: 0px var(--card-hover-box-shadow-1-y) var(--card-hover-box-shadow-1-blur) var(--card-hover-box-shadow-1), 0px var(--card-hover-box-shadow-2-y) var(--card-hover-box-shadow-2-blur) var(--card-hover-box-shadow-2), 0 0 0 1px var(--card-hover-border-color);
+    padding: 56px 16px 16px 16px;
+    border-radius: 15px;
+    position: relative;
+    transition: box-shadow .25s;
+}
+
+.card22::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+}
+
+.card22 .icon {
+    z-index: 2;
+    position: relative;
+    display: table;
+    padding: 8px;
+}
+
+.card22 .icon::after {
+    content: '';
+    position: absolute;
+    inset: 4.5px;
+    border-radius: 50%;
+    background-color: var(--card-hover-icon-background-color);
+    border: 1px solid var(--card-hover-icon-border-color);
+    backdrop-filter: blur(2px);
+    transition: background-color .25s, border-color .25s;
+}
+
+.card22 .icon svg {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 24px;
+    height: 24px;
+    transform: translateZ(0);
+    color: var(--card-hover-icon-color);
+    transition: color .25s;
+}
+
+.card22 h4 {
+    z-index: 2;
+    position: relative;
+    margin: 12px 0 4px 0;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 2;
+    width: fit-content;
+    background: linear-gradient(to bottom right,
+            white 30%,
+            #d5d8f6 80%,
+            #fdf7fe 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.card22 p {
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.card22 .shine {
+    border-radius: inherit;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.card22 .shine:before {
+    content: '';
+    width: 150%;
+    padding-bottom: 150%;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 55%;
+    filter: blur(35px);
+    opacity: var(--card-shine-opacity);
+    transform: translateX(-50%);
+    background-image: var(--card-shine-gradient);
+}
+
+.card22 .background22 {
+    border-radius: inherit;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    -webkit-mask-image: radial-gradient(circle at 60% 5%, black 0%, black 15%, transparent 60%);
+    mask-image: radial-gradient(circle at 60% 5%, black 0%, black 15%, transparent 60%);
+}
+
+.card22 .background22 .tiles {
+    opacity: 1;
+    transition: opacity .25s;
+}
+
+.card22 .background22 .tiles .tile {
+    position: absolute;
+    background-color: var(--card-tile-color);
+    animation-name: tile;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+.card22 .background22 .tiles .tile.tile-4,
+.card22 .background22 .tiles .tile.tile-6,
+.card22 .background22 .tiles .tile.tile-10 {
+    animation-delay: -2s;
+}
+
+.card22 .background22 .tiles .tile.tile-3,
+.card22 .background22 .tiles .tile.tile-5,
+.card22 .background22 .tiles .tile.tile-8 {
+    animation-delay: -4s;
+}
+
+.card22 .background22 .tiles .tile.tile-2,
+.card22 .background22 .tiles .tile.tile-9 {
+    animation-delay: -6s;
+}
+
+.card22 .background22 .tiles .tile.tile-1 {
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 22.5%;
+}
+
+.card22 .background22 .tiles .tile.tile-2 {
+    top: 0;
+    left: 22.5%;
+    height: 10%;
+    width: 27.5%;
+}
+
+.card22 .background22 .tiles .tile.tile-3 {
+    top: 0;
+    left: 50%;
+    height: 10%;
+    width: 27.5%;
+}
+
+.card22 .background22 .tiles .tile.tile-4 {
+    top: 0;
+    left: 77.5%;
+    height: 10%;
+    width: 22.5%;
+}
+
+.card22 .background22 .tiles .tile.tile-5 {
+    top: 10%;
+    left: 0;
+    height: 22.5%;
+    width: 22.5%;
+}
+
+.card22 .background22 .tiles .tile.tile-6 {
+    top: 10%;
+    left: 22.5%;
+    height: 22.5%;
+    width: 27.5%;
+}
+
+.card22 .background22 .tiles .tile.tile-7 {
+    top: 10%;
+    left: 50%;
+    height: 22.5%;
+    width: 27.5%;
+}
+
+.card22 .background22 .tiles .tile.tile-8 {
+    top: 10%;
+    left: 77.5%;
+    height: 22.5%;
+    width: 22.5%;
+}
+
+.card22 .background22 .tiles .tile.tile-9 {
+    top: 32.5%;
+    left: 50%;
+    height: 22.5%;
+    width: 27.5%;
+}
+
+.card22 .background22 .tiles .tile.tile-10 {
+    top: 32.5%;
+    left: 77.5%;
+    height: 22.5%;
+    width: 22.5%;
+}
+
+@keyframes tile {
+
+    0%,
+    12.5%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    82.5% {
+        opacity: 0;
+    }
+}
+
+.card22 .background22 .line22 {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    transition: opacity .35s;
+}
+
+.card22 .background22 .line22:before,
+.card22 .background22 .line22:after {
+    content: '';
+    position: absolute;
+    background-color: var(--card-line-color);
+    transition: transform .35s;
+}
+
+.card22 .background22 .line22:before {
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform-origin: 0 50%;
+    transform: scaleX(1);
+}
+
+.card22 .background22 .line22:after {
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    transform-origin: 50% 0;
+    transform: scaleY(1);
+}
+
+.card22 .background22 .line22.line-1:before {
+    top: 10%;
+}
+
+.card22 .background22 .line22.line-1:after {
+    left: 22.5%;
+}
+
+.card22 .background22 .line22.line-1:before,
+.card22 .background22 .line22.line-1:after {
+    transition-delay: .0s;
+}
+
+.card22 .background22 .line22.line-2:before {
+    top: 32.5%;
+}
+
+.card22 .background22 .line22.line-2:after {
+    left: 50%;
+}
+
+.card22 .background22 .line22.line-2:before,
+.card22 .background22 .line22.line-2:after {
+    transition-delay: .15s;
+}
+
+.card22 .background22 .line22.line-3:before {
+    top: 55%;
+}
+
+.card22 .background22 .line22.line-3:after {
+    right: 22.5%;
+}
+
+.card22 .background22 .line22.line-3:before,
+.card22 .background22 .line22.line-3:after {
+    transition-delay: .3s;
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.icons8-google-logo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNTAgNTAiIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiPjxwYXRoIGQ9Ik0gMjYgMiBDIDEzLjMwODU5NCAyIDMgMTIuMzA4NTk0IDMgMjUgQyAzIDM3LjY5MTQwNiAxMy4zMDg1OTQgNDggMjYgNDggQyAzNS45MTc5NjkgNDggNDEuOTcyNjU2IDQzLjQzNzUgNDUuMTI1IDM3Ljc4MTI1IEMgNDguMjc3MzQ0IDMyLjEyNSA0OC42NzU3ODEgMjUuNDgwNDY5IDQ3LjcxODc1IDIwLjkzNzUgTCA0Ny41MzEyNSAyMC4xNTYyNSBMIDQ2Ljc1IDIwLjE1NjI1IEwgMjYgMjAuMTI1IEwgMjUgMjAuMTI1IEwgMjUgMzAuNTMxMjUgTCAzNi40Mzc1IDMwLjUzMTI1IEMgMzQuNzEwOTM4IDM0LjUzMTI1IDMxLjE5NTMxMyAzNy4yODEyNSAyNiAzNy4yODEyNSBDIDE5LjIxMDkzOCAzNy4yODEyNSAxMy43MTg3NSAzMS43ODkwNjMgMTMuNzE4NzUgMjUgQyAxMy43MTg3NSAxOC4yMTA5MzggMTkuMjEwOTM4IDEyLjcxODc1IDI2IDEyLjcxODc1IEMgMjkuMDUwNzgxIDEyLjcxODc1IDMxLjgyMDMxMyAxMy44NDc2NTYgMzMuOTY4NzUgMTUuNjg3NSBMIDM0LjY4NzUgMTYuMjgxMjUgTCA0MS41MzEyNSA5LjQzNzUgTCA0Mi4yNSA4LjY4NzUgTCA0MS41IDggQyAzNy40MTQwNjMgNC4yNzczNDQgMzEuOTYwOTM4IDIgMjYgMiBaIE0gMjYgNCBDIDMxLjA3NDIxOSA0IDM1LjY1MjM0NCA1Ljg1NTQ2OSAzOS4yODEyNSA4Ljg0Mzc1IEwgMzQuNDY4NzUgMTMuNjU2MjUgQyAzMi4wODk4NDQgMTEuODc4OTA2IDI5LjE5OTIxOSAxMC43MTg3NSAyNiAxMC43MTg3NSBDIDE4LjEyODkwNiAxMC43MTg3NSAxMS43MTg3NSAxNy4xMjg5MDYgMTEuNzE4NzUgMjUgQyAxMS43MTg3NSAzMi44NzEwOTQgMTguMTI4OTA2IDM5LjI4MTI1IDI2IDM5LjI4MTI1IEMgMzIuNTUwNzgxIDM5LjI4MTI1IDM3LjI2MTcxOSAzNS4yNjU2MjUgMzguOTM3NSAyOS44MTI1IEwgMzkuMzQzNzUgMjguNTMxMjUgTCAyNyAyOC41MzEyNSBMIDI3IDIyLjEyNSBMIDQ1Ljg0Mzc1IDIyLjE1NjI1IEMgNDYuNTA3ODEzIDI2LjE5MTQwNiA0Ni4wNjY0MDYgMzEuOTg0Mzc1IDQzLjM3NSAzNi44MTI1IEMgNDAuNTE1NjI1IDQxLjkzNzUgMzUuMzIwMzEzIDQ2IDI2IDQ2IEMgMTQuMzg2NzE5IDQ2IDUgMzYuNjA5Mzc1IDUgMjUgQyA1IDEzLjM5MDYyNSAxNC4zODY3MTkgNCAyNiA0IFoiLz48L3N2Zz4=') 50% 50% no-repeat;
+    background-size: 100%;
+}
