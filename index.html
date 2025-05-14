@@ -24,7 +24,7 @@
 
         /* html {
             height: 3000px;
-            background-color: #ffffff;
+            background-color: #00020f;
         } */
 
         body {
@@ -32,11 +32,97 @@
             height: 100%;
         }
 
-        .gif {
-            background: url(images/google.gif);
-            height: 40px;
+        .our-plans-blue-background {
+            width: 100%;
+            height: 400px;
+            background-color: #00020f;
+            margin-top: 570px;
+        }
+
+        .our-plan-background {
+            width: 100%;
+            height: 500px;
+            position: absolute;
+            z-index: 9;
+            background-color: #00020f;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .our-plan-cards {
+            display: grid;
+            width: 1200px;
+            grid-template-columns: repeat(3, 380px);
+            grid-gap: 30px;
+        }
+
+        .our-plan-card {
+            background-color: #00041F;
+            height: 500px;
+            border-radius: 15px;
+        }
+
+        .our-plans-background {
+            width: 100%;
+            height: 100%;
+            background: url(images/fXXrEnWUYP7siQQR1XB0guYmQ.svg);
             background-repeat: no-repeat;
             background-size: contain;
+            background-position: center;
+        }
+
+        .our-plans-right {
+            position: absolute;
+            z-index: 9;
+            width: 100%;
+            margin-top: 80px;
+            height: 60%;
+            background: url(images/9vcSyo96vHEThLwNPwVMScU.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .our-plans-left {
+            position: absolute;
+            z-index: 9;
+            width: 100%;
+            height: 60%;
+            background: url(images/8ptkzSRdUPoCw7SXqhEnWdZc3cM.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-top: 80px;
+            background-position-x: right;
+        }
+
+        .our-plans-center {
+            position: absolute;
+            width: 1200px;
+            z-index: 9;
+            margin-top: 150px;
+            height: 100%;
+            justify-self: anchor-center;
+        }
+
+        .our-plans-right-light {
+            position: absolute;
+            width: 100%;
+            margin-top: -100px;
+            height: 70%;
+            background: url(images/L7CpEUs0IRH6OiJichMUMCK5g.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .our-plans-left-light {
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            background: url(images/AlUU80ePWWBn9KNSPihCaYtCBJY.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-top: -100px;
+            background-position-x: right;
         }
 
         .our-icons {
@@ -44,7 +130,7 @@
             display: flex;
             justify-content: center;
             position: absolute;
-            z-index: 9;
+            z-index: 10;
             width: 100%;
             height: 300px;
             background-color: #00020f;
@@ -636,7 +722,7 @@
         .center-text#description-our-works {
             text-shadow: 0 0 black;
             position: relative;
-            width: 100%;
+            width: fit-content;
             justify-self: anchor-center;
             text-align: center;
             margin-top: 0px;
@@ -1308,7 +1394,8 @@
         .header {
             position: fixed;
             top: 30px;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 1200px;
             height: 90px;
             padding-right: 40px;
@@ -1317,7 +1404,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            justify-self: anchor-center;
             backdrop-filter: blur(10px);
             border: 0.9px solid #FFFFFF1A;
             z-index: 1000;
@@ -3413,6 +3499,48 @@
                         <div class="line22 line-3"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-plans-blue-background">
+        <div class=" our-plans-background">
+            <div class="our-plans-right"></div>
+            <div class="our-plans-left"></div>
+            <div class="our-plans-left-light"></div>
+            <div class="our-plans-right-light"></div>
+            <div class="our-plans-center">
+                <div class="upper-hero-text" id="results2">
+                    <h1 id="appointment2">
+                        Pacotes
+                    </h1>
+                </div>
+                <div class="center-text" id="second">
+                    <p>Nossos planos</p>
+                </div>
+                <div class="center-text" id="description-our-works">
+                    <p>Oferecemos soluções completas para sua clínica ou consultório, desde um site
+                        profissional <br>até estratégias de marketing digital que atraem
+                        pacientes reais.</p>
+                    <div id="stars2"></div>
+                </div>
+                <div class="center-text" id="description-our-mobile">
+                    <p>Oferecemos soluções completas para sua clínica ou consultório, desde um site
+                        profissional até estratégias de marketing digital que atraem
+                        pacientes reais.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-plan-background">
+        <div class="our-plan-cards">
+            <div class="our-plan-card">
+
+            </div>
+            <div class="our-plan-card">
+
+            </div>
+            <div class="our-plan-card">
+
             </div>
         </div>
     </div>
