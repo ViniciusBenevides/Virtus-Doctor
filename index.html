@@ -521,7 +521,8 @@
             margin-top: -4px;
             position: relative;
             z-index: 99;
-            justify-items: center;
+            width: 100%;
+            text-align: -webkit-center;
         }
 
         .video-project {
@@ -544,10 +545,7 @@
             position: relative;
             width: 1200px;
             padding-top: 80px;
-            justify-self: center;
             margin-top: 280px;
-            justify-items: center;
-            place-self: center;
         }
 
         .project-card {
@@ -614,6 +612,8 @@
             z-index: 4;
             height: 280px;
             width: 100%;
+            display: flex;
+            justify-content: center;
             background: linear-gradient(to bottom, #00020f, #00020f);
         }
 
@@ -645,7 +645,6 @@
         .upper-hero-text#results2 {
             margin-top: 0;
             margin-bottom: 8px;
-            justify-self: anchor-center;
         }
 
         .center-text {
@@ -709,7 +708,6 @@
             text-shadow: 0 0 black;
             position: absolute;
             width: 100%;
-            justify-self: anchor-center;
             text-align: center;
             margin-top: 245px;
             font-family: inherit;
@@ -723,8 +721,7 @@
         .center-text#description-our-works {
             text-shadow: 0 0 black;
             position: relative;
-            width: fit-content;
-            justify-self: anchor-center;
+            width: 100%;
             text-align: center;
             margin-top: 0px;
             font-family: inherit;
@@ -2479,7 +2476,9 @@
                 text-shadow: 0 0 black;
                 position: relative;
                 display: block;
-                width: 90%;
+                width: 100%;
+                padding-left: 5%;
+                padding-right: 5%;
                 justify-self: anchor-center;
                 text-align: center;
                 margin-top: 0px;
@@ -2997,10 +2996,12 @@
     <div class="our-works">
         <div class="dark-blue-rainbow">
             <div id="stars2"></div>
-            <div class="upper-hero-text" id="results2">
-                <h1 id="appointment2">
-                    Portfólio
-                </h1>
+            <div class="upper-hero-text-container">
+                <div class="upper-hero-text" id="results2">
+                    <h1 id="appointment2">
+                        Portfólio
+                    </h1>
+                </div>
             </div>
             <div class="center-text" id="second">
                 <p>Nossos sites</p>
@@ -3107,10 +3108,12 @@
         <div class="insight-section">
             <div class="insight-section-line"></div>
             <div class="center-insight">
-                <div class="upper-hero-text" id="results2">
-                    <h1 id="appointment2">
-                        Dados
-                    </h1>
+                <div class="upper-hero-text-container">
+                    <div class="upper-hero-text" id="results2">
+                        <h1 id="appointment2">
+                            Dados
+                        </h1>
+                    </div>
                 </div>
                 <div class="center-text" id="second">
                     <p>Os números falam</p>
@@ -3190,10 +3193,12 @@
     <div class="our-method-background">
         <div class="our-method">
             <div id="stars4"></div>
-            <div class="upper-hero-text" id="results2">
-                <h1 id="appointment2">
-                    Metódo
-                </h1>
+            <div class="upper-hero-text-container">
+                <div class="upper-hero-text" id="results2">
+                    <h1 id="appointment2">
+                        Metódo
+                    </h1>
+                </div>
             </div>
             <div class="center-text" id="second">
                 <p>Nossas etapas</p>
@@ -3304,10 +3309,12 @@
         <div class="dark-blue-rainbow">
             <div id="stars3"></div>
             <div id="stars4"></div>
-            <div class="upper-hero-text" id="results2">
-                <h1 id="appointment2">
-                    Serviços
-                </h1>
+            <div class="upper-hero-text-container">
+                <div class="upper-hero-text" id="results2">
+                    <h1 id="appointment2">
+                        Serviços
+                    </h1>
+                </div>
             </div>
             <div class="center-text" id="second">
                 <p>Nossas soluções</p>
