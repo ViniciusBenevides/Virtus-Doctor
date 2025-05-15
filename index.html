@@ -638,7 +638,8 @@
         .upper-hero-text#results {
             position: absolute;
             margin-top: 135px;
-            justify-self: anchor-center;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .upper-hero-text#results2 {
@@ -1274,8 +1275,13 @@
 
         .upper-hero-text {
             margin-top: 220px;
-            width: auto;
-            justify-self: center;
+            width: fit-content;
+        }
+
+        .upper-hero-text-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         .hero-text h1 {
@@ -2606,8 +2612,11 @@
 
             .upper-hero-text {
                 margin-top: 180px;
-                margin-left: 5%;
-                margin-right: 5%;
+            }
+
+            .upper-hero-text-container {
+                padding-left: 5%;
+                padding-right: 5%;
             }
 
             .upper-hero-text h1#appointment {
@@ -2762,10 +2771,12 @@
     <!-- Fundo de estrelas -->
     <section class="wrapper">
         <div id="stars"></div>
-        <div class="upper-hero-text">
-            <h1 id="appointment">
-                Relatórios mensais mostrando cada paciente captado
-            </h1>
+        <div class="upper-hero-text-container">
+            <div class="upper-hero-text">
+                <h1 id="appointment">
+                    Relatórios mensais mostrando cada paciente captado
+                </h1>
+            </div>
         </div>
         <div class="hero-text">
             <h1>
