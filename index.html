@@ -779,7 +779,7 @@
         }
 
         .left-light {
-            z-index: 4;
+            z-index: 2;
             margin-top: -150px;
             background-repeat: no-repeat;
             background-position-x: right;
@@ -912,7 +912,8 @@
             color: transparent;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
+            /* transform: translate(-50%, -50%); */
             font-size: 1.5rem;
             line-height: 1.5;
             font-weight: 500;
@@ -931,7 +932,8 @@
             position: relative;
             font-size: 1.5rem;
             line-height: 1.5;
-            justify-self: center;
+            left: 50%;
+            transform: translateX(-50%);
             font-weight: 600;
             width: fit-content;
             margin-bottom: 10px;
