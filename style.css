@@ -396,3 +396,55 @@ html {
     background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNTAgNTAiIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiPjxwYXRoIGQ9Ik0gMjYgMiBDIDEzLjMwODU5NCAyIDMgMTIuMzA4NTk0IDMgMjUgQyAzIDM3LjY5MTQwNiAxMy4zMDg1OTQgNDggMjYgNDggQyAzNS45MTc5NjkgNDggNDEuOTcyNjU2IDQzLjQzNzUgNDUuMTI1IDM3Ljc4MTI1IEMgNDguMjc3MzQ0IDMyLjEyNSA0OC42NzU3ODEgMjUuNDgwNDY5IDQ3LjcxODc1IDIwLjkzNzUgTCA0Ny41MzEyNSAyMC4xNTYyNSBMIDQ2Ljc1IDIwLjE1NjI1IEwgMjYgMjAuMTI1IEwgMjUgMjAuMTI1IEwgMjUgMzAuNTMxMjUgTCAzNi40Mzc1IDMwLjUzMTI1IEMgMzQuNzEwOTM4IDM0LjUzMTI1IDMxLjE5NTMxMyAzNy4yODEyNSAyNiAzNy4yODEyNSBDIDE5LjIxMDkzOCAzNy4yODEyNSAxMy43MTg3NSAzMS43ODkwNjMgMTMuNzE4NzUgMjUgQyAxMy43MTg3NSAxOC4yMTA5MzggMTkuMjEwOTM4IDEyLjcxODc1IDI2IDEyLjcxODc1IEMgMjkuMDUwNzgxIDEyLjcxODc1IDMxLjgyMDMxMyAxMy44NDc2NTYgMzMuOTY4NzUgMTUuNjg3NSBMIDM0LjY4NzUgMTYuMjgxMjUgTCA0MS41MzEyNSA5LjQzNzUgTCA0Mi4yNSA4LjY4NzUgTCA0MS41IDggQyAzNy40MTQwNjMgNC4yNzczNDQgMzEuOTYwOTM4IDIgMjYgMiBaIE0gMjYgNCBDIDMxLjA3NDIxOSA0IDM1LjY1MjM0NCA1Ljg1NTQ2OSAzOS4yODEyNSA4Ljg0Mzc1IEwgMzQuNDY4NzUgMTMuNjU2MjUgQyAzMi4wODk4NDQgMTEuODc4OTA2IDI5LjE5OTIxOSAxMC43MTg3NSAyNiAxMC43MTg3NSBDIDE4LjEyODkwNiAxMC43MTg3NSAxMS43MTg3NSAxNy4xMjg5MDYgMTEuNzE4NzUgMjUgQyAxMS43MTg3NSAzMi44NzEwOTQgMTguMTI4OTA2IDM5LjI4MTI1IDI2IDM5LjI4MTI1IEMgMzIuNTUwNzgxIDM5LjI4MTI1IDM3LjI2MTcxOSAzNS4yNjU2MjUgMzguOTM3NSAyOS44MTI1IEwgMzkuMzQzNzUgMjguNTMxMjUgTCAyNyAyOC41MzEyNSBMIDI3IDIyLjEyNSBMIDQ1Ljg0Mzc1IDIyLjE1NjI1IEMgNDYuNTA3ODEzIDI2LjE5MTQwNiA0Ni4wNjY0MDYgMzEuOTg0Mzc1IDQzLjM3NSAzNi44MTI1IEMgNDAuNTE1NjI1IDQxLjkzNzUgMzUuMzIwMzEzIDQ2IDI2IDQ2IEMgMTQuMzg2NzE5IDQ2IDUgMzYuNjA5Mzc1IDUgMjUgQyA1IDEzLjM5MDYyNSAxNC4zODY3MTkgNCAyNiA0IFoiLz48L3N2Zz4=') 50% 50% no-repeat;
     background-size: 100%;
 }
+
+/* Adicionar prefixo específico para Firefox */
+.swiper-slide .front,
+.swiper-slide .back,
+.swiper-slide button,
+.swiper-slide button * {
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.swiper {
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.card {
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/* Adicionar prefixo e regras específicas */
+.swiper-slide,
+.swiper-slide * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Permitir seleção apenas em elementos necessários */
+input,
+textarea,
+[contenteditable] {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* Adicione isso ao seu CSS existente */
+.swiper-slide-active.flipped .front p,
+.swiper-slide-active.flipped .front button {
+  display: none !important;
+}
+
+.swiper-slide-active.flipped .front{
+  top: 46px;
+}
+
+.swiper-slide-active.flipped .back {
+  opacity: 1 !important;
+}

@@ -895,29 +895,26 @@
 
         .swiper-slide-active .back {
             opacity: 1;
-            top: 50px;
+            top: 46px;
             transform: rotateY(180deg);
             height: 350px;
         }
 
         .swiper-slide-active .back p {
             position: absolute;
-            background: linear-gradient(to bottom right,
-                    white 30%,
-                    #d5d8f6 80%,
-                    #fdf7fe 100%);
+            background: linear-gradient(to bottom right, white 30%, #d5d8f6 80%, #fdf7fe 100%);
+            background-clip: border-box;
             -webkit-background-clip: text;
             background-clip: text;
             font-family: inherit;
             color: transparent;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            /* transform: translate(-50%, -50%); */
+            top: 38%;
             font-size: 1.5rem;
             line-height: 1.5;
             font-weight: 500;
-            width: 80%;
+            width: fit-content;
+            padding-right: 10%;
+            padding-left: 10%;
         }
 
         .swiper-slide-active .front p {
@@ -2313,6 +2310,9 @@
         }
 
         @media (max-width: 768px) {
+            .swiper-slide-active.flipped .front{
+                top: 58px
+            }
             .our-icons-1200 {
                 align-items: flex-start;
             }
@@ -2530,11 +2530,18 @@
                 font-size: 14px;
                 line-height: 1.5;
                 font-weight: 500;
-                width: 80%;
+                width: 100%;
+                top: 28%
             }
 
             .swiper-slide-active .back {
                 height: 250px;
+                top: 58px;
+            }
+
+            .swiper-slide{
+                display: flex;
+                justify-content: center;
             }
 
             .swiper-slide-active .front p {
