@@ -32,6 +32,145 @@
             height: 100%;
         }
 
+        .video-card-master2 {
+            cursor: auto;
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+            display: block;
+            object-fit: cover;
+            background-color: rgba(0, 0, 0, 0);
+            object-position: 50% 50%;
+            border-radius: 15px;
+        }
+
+        .video-card-master-container {
+            opacity: 0.59;
+            inset: 0;
+            position: absolute;
+            z-index: 1;
+            border-radius: 15px;
+        }
+
+        .back1 {
+            inset: 0;
+            overflow: visible;
+            position: absolute;
+            border-radius: 15px;
+            z-index: 1;
+            opacity: 1;
+            mix-blend-mode: color;
+            background-color: rgb(15, 51, 169);
+        }
+
+        .back2 {
+            border-radius: 15px;
+            inset: 0;
+            overflow: visible;
+            position: absolute;
+            z-index: 1;
+            opacity: 1;
+            background: radial-gradient(126% 147% at 50% 0%, rgb(0, 3, 25) 38%, rgba(0, 3, 25, 0) 78%);
+        }
+
+        .back3 {
+            border-radius: 15px;
+            inset: 0;
+            overflow: visible;
+            position: absolute;
+            z-index: 1;
+            opacity: 1;
+            background: linear-gradient(180deg, rgb(0, 3, 25) 14%, rgba(0, 3, 25, 0) 100%);
+        }
+
+        .video-card-master {
+            bottom: 0;
+            flex: none;
+            height: 192px;
+            left: 0;
+            overflow: visible;
+            position: absolute;
+            right: 0;
+            opacity: 0;
+            z-index: 0;
+            transition: 1s ease;
+        }
+
+        .our-plan-card:hover .video-card-master {
+            opacity: 1;
+        }
+
+        .left-light-card-master {
+            height: 300px;
+            width: 200px;
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            background: url(images/jUjkRLmhkhvppSSBYZOnxJasEk.svg);
+            border-radius: 15px;
+        }
+
+        .center-light-card-master {
+            height: 250px;
+            width: 380px;
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            z-index: -1;
+            background: url(images/8gfDFRPNlOchA6q4vulBMHEV8ho.svg);
+            background-size: cover;
+            border-radius: 15px;
+            background-position-x: center;
+        }
+
+        .right-light-card-master {
+            height: 300px;
+            width: 200px;
+            position: absolute;
+            overflow: hidden;
+            right: 0;
+            background: url(images/iusiYcS9aOMP5Ql2hyyP0UJ6yP8.svg);
+            background-position-x: right;
+            border-radius: 15px;
+        }
+
+        .shiny-cta-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .card-icon {
+            width: 6.1%;
+            height: 18px;
+        }
+
+        .card-benefits-text {
+            width: 93%;
+            font-size: 18px;
+            font-weight: 500;
+            color: #C4C8D4;
+            line-height: 1.2;
+        }
+
+        .card-benefits {
+            position: relative;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .card-line {
+            width: 100%;
+            margin-top: 20px;
+            border-top: 1px solid;
+            border-image: linear-gradient(to right, #030c2233, #4d60a5, #080f2133) 1;
+            backdrop-filter: blur(6px);
+            margin-bottom: 30px;
+        }
+
         .our-plans-blue-background {
             width: 100%;
             height: 400px;
@@ -42,6 +181,7 @@
         .our-plan-background {
             width: 100%;
             height: 500px;
+            padding-bottom: 550px;
             position: absolute;
             z-index: 9;
             background-color: #00020f;
@@ -58,12 +198,28 @@
         }
 
         .our-plan-card {
-            background-color: #00041F;
-            height: 500px;
+            position: relative;
+            padding-right: 10%;
+            padding-left: 10%;
+            border: 1px solid #131839;
+            display: block;
+            /* background-color: #020621; */
+            background: linear-gradient(180deg, #00041f00 40%, #000319 50%);
+            height: 520px;
             border-radius: 15px;
         }
 
+        .our-plan-card#master {
+            background-color: #000319;
+        }
+
+        .our-plan-card#master .video-card-master {
+            display: none;
+        }
+
         .our-plans-background {
+            display: flex;
+            justify-content: center;
             width: 100%;
             height: 100%;
             background: url(images/fXXrEnWUYP7siQQR1XB0guYmQ.svg);
@@ -100,8 +256,6 @@
             width: 1200px;
             z-index: 9;
             margin-top: 150px;
-            height: 100%;
-            justify-self: anchor-center;
         }
 
         .our-plans-right-light {
@@ -649,7 +803,6 @@
 
         .center-text {
             width: auto;
-            justify-self: center;
             text-align: center;
             margin-top: 185px;
             background: linear-gradient(to bottom right,
@@ -671,6 +824,13 @@
         .center-text#second {
             margin-top: 0;
             margin-bottom: 10px;
+        }
+
+        .center-text#fifth {
+            margin-top: 40px;
+            font-size: 36px;
+            position: relative;
+            z-index: 99;
         }
 
         .project-card-under-text {
@@ -721,13 +881,15 @@
         .center-text#description-our-works {
             text-shadow: 0 0 black;
             position: relative;
-            width: 100%;
+            width: fit-content;
             text-align: center;
             margin-top: 0px;
             font-family: inherit;
             font-size: 18px;
             text-wrap: wrap;
             font-weight: 400;
+            left: 50%;
+            transform: translateX(-50%);
             color: #6D7792;
             line-height: 1.4;
         }
@@ -895,29 +1057,26 @@
 
         .swiper-slide-active .back {
             opacity: 1;
-            top: 50px;
+            top: 46px;
             transform: rotateY(180deg);
             height: 350px;
         }
 
         .swiper-slide-active .back p {
             position: absolute;
-            background: linear-gradient(to bottom right,
-                    white 30%,
-                    #d5d8f6 80%,
-                    #fdf7fe 100%);
+            background: linear-gradient(to bottom right, white 30%, #d5d8f6 80%, #fdf7fe 100%);
+            background-clip: border-box;
             -webkit-background-clip: text;
             background-clip: text;
             font-family: inherit;
             color: transparent;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            /* transform: translate(-50%, -50%); */
+            top: 38%;
             font-size: 1.5rem;
             line-height: 1.5;
             font-weight: 500;
-            width: 80%;
+            width: fit-content;
+            padding-right: 10%;
+            padding-left: 10%;
         }
 
         .swiper-slide-active .front p {
@@ -1707,7 +1866,7 @@
             background-position: 50%;
         }
 
-        #stars {
+        .stars {
             width: 1px;
             height: 1px;
             background: transparent;
@@ -1894,7 +2053,7 @@
                 696px 1654px #fff, 1144px 60px #fff;
         }
 
-        #stars2 {
+        .stars2 {
             width: 1px;
             height: 1px;
             background: transparent;
@@ -1940,10 +2099,61 @@
                 41px 61px #fff, 402px 691px #fff, 72px 496px #fff, 88px 806px #fff, 244px 1118px #fff,
                 634px 383px #fff, 468px 194px #fff, 468px 1294px #fff, 529px 733px #fff, 226px 506px #fff,
                 651px 878px #fff, 238px 1967px #fff, 484px 1856px #fff, 112px 953px #fff, 100px 1026px #fff,
-                388px 1412px #fff, 696px 1654px #fff
+                388px 1412px #fff, 696px 1654px #fff;
         }
 
-        #stars3 {
+        .stars22 {
+            display: none;
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            position: absolute;
+            pointer-events: none;
+            z-index: 1000;
+            animation: animStar2 30s linear infinite;
+            box-shadow:
+                324px 42px #fff, 303px 586px #fff, 451px 625px #fff, 36px 1546px #fff, 132px 934px #fff,
+                586px 384px #fff, 164px 527px #fff, 8px 646px #fff, 665px 1357px #fff, 242px 1343px #fff,
+                636px 959px #fff, 304px 686px #fff, 614px 751px #fff, 355px 335px #fff, 90px 60px #fff,
+                524px 932px #fff, 214px 413px #fff, 378px 125px #fff, 308px 834px #fff,
+                561px 137px #fff, 343px 739px #fff, 576px 1903px #fff, 297px 1873px #fff,
+                192px 162px #fff, 59px 453px #fff, 73px 1507px #fff, 654px 14px #fff,
+                494px 171px #fff, 142px 388px #fff, 572px 215px #fff, 329px 469px #fff, 275px 316px #fff,
+                625px 58px #fff, 166px 942px #fff, 51px 307px #fff, 416px 170px #fff, 572px 219px #fff,
+                218px 8px #fff, 348px 1334px #fff, 469px 413px #fff, 240px 942px #fff, 236px 1514px #fff,
+                73px 1633px #fff, 671px 1301px #fff, 112px 1084px #fff, 687px 1115px #fff, 11px 523px #fff,
+                429px 7px #fff, 157px 297px #fff, 545px 635px #fff, 52px 1080px #fff, 9px 309px #fff,
+                387px 703px #fff, 290px 259px #fff, 295px 598px #fff, 34px 1922px #fff, 467px 369px #fff,
+                12px 512px #fff, 617px 1410px #fff, 682px 577px #fff, 439px 327px #fff, 673px 129px #fff,
+                37px 1353px #fff, 416px 18px #fff, 187px 344px #fff, 79px 761px #fff, 354px 552px #fff,
+                161px 1784px #fff, 614px 251px #fff, 17px 212px #fff, 179px 996px #fff, 467px 1208px #fff,
+                374px 275px #fff, 357px 552px #fff, 402px 1858px #fff, 667px 1257px #fff, 275px 316px #fff,
+                407px 863px #fff, 461px 736px #fff, 284px 1608px #fff, 103px 430px #fff, 70px 1098px #fff,
+                309px 1292px #fff, 65px 473px #fff, 402px 1576px #fff, 35px 622px #fff, 164px 666px #fff,
+                270px 1297px #fff, 440px 865px #fff, 272px 1249px #fff, 190px 1646px #fff, 635px 801px #fff,
+                226px 455px #fff, 237px 1264px #fff, 333px 1392px #fff, 467px 548px #fff, 243px 156px #fff,
+                483px 1616px #fff, 581px 1084px #fff, 107px 732px #fff, 166px 1493px #fff, 540px 467px #fff,
+                130px 529px #fff, 33px 1980px #fff, 528px 710px #fff, 505px 1480px #fff, 292px 357px #fff,
+                384px 1746px #fff, 392px 1098px #fff, 647px 548px #fff, 390px 1498px #fff, 192px 1472px #fff,
+                313px 1642px #fff, 281px 1849px #fff, 435px 1191px #fff, 411px 944px #fff, 210px 636px #fff,
+                516px 364px #fff, 504px 204px #fff, 657px 34px #fff, 248px 180px #fff, 667px 1562px #fff,
+                695px 841px #fff, 87px 167px #fff, 607px 1368px #fff, 172px 1350px #fff, 213px 972px #fff,
+                285px 1806px #fff, 345px 1190px #fff, 478px 1433px #fff, 579px 245px #fff, 408px 1352px #fff,
+                665px 286px #fff, 493px 1720px #fff, 637px 1140px #fff, 764px 324px #fff, 36px 1381px #fff,
+                242px 1471px #fff, 654px 797px #fff, 752px 23px #fff, 21px 412px #fff, 335px 1945px #fff,
+                264px 583px #fff, 158px 1311px #fff, 528px 164px #fff, 166px 980px #fff, 95px 797px #fff,
+                469px 939px #fff, 312px 1293px #fff, 355px 570px #fff, 276px 913px #fff, 266px 156px #fff,
+                455px 655px #fff, 236px 1329px #fff, 146px 1228px #fff, 36px 1063px #fff, 288px 1489px #fff,
+                390px 1071px #fff, 411px 1036px #fff, 291px 271px #fff, 518px 101px #fff, 145px 1320px #fff,
+                69px 1397px #fff, 257px 725px #fff, 183px 102px #fff, 595px 950px #fff, 175px 1179px #fff,
+                41px 61px #fff, 402px 691px #fff, 72px 496px #fff, 88px 806px #fff, 244px 1118px #fff,
+                634px 383px #fff, 468px 194px #fff, 468px 1294px #fff, 529px 733px #fff, 226px 506px #fff,
+                651px 878px #fff, 238px 1967px #fff, 484px 1856px #fff, 112px 953px #fff, 100px 1026px #fff,
+                388px 1412px #fff, 696px 1654px #fff;
+        }
+
+
+        .stars3 {
             display: none;
             width: 1px;
             height: 1px;
@@ -1962,22 +2172,9 @@
                 183px 102px #fff, 41px 61px #fff, 468px 194px #fff
         }
 
-        #stars4 {
-            width: 1px;
-            height: 1px;
-            background: transparent;
-            position: absolute;
-            pointer-events: none;
-            z-index: 1;
+        .stars3#stars4 {
+            display: block;
             animation: animStar3 15s linear infinite;
-            box-shadow:
-                324px 42px #fff, 90px 60px #fff, 378px 125px #fff, 192px 162px #fff, 654px 14px #fff,
-                494px 171px #fff, 572px 215px #fff, 625px 58px #fff, 416px 170px #fff, 572px 219px #fff,
-                218px 8px #fff, 429px 7px #fff, 157px 297px #fff, 290px 259px #fff, 416px 18px #fff,
-                614px 251px #fff, 17px 212px #fff, 374px 275px #fff, 243px 156px #fff, 504px 204px #fff,
-                657px 34px #fff, 248px 180px #fff, 87px 167px #fff, 579px 245px #fff, 665px 286px #fff,
-                752px 23px #fff, 528px 164px #fff, 266px 156px #fff, 291px 271px #fff, 518px 101px #fff,
-                183px 102px #fff, 41px 61px #fff, 468px 194px #fff
         }
 
         /* Animação dos links do menu */
@@ -2037,6 +2234,16 @@
 
             to {
                 transform: translateY(-800px);
+            }
+        }
+
+        @keyframes animStar22 {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(-831px);
             }
         }
 
@@ -2313,6 +2520,85 @@
         }
 
         @media (max-width: 768px) {
+            .our-plans-blue-background {
+                align-items: center;
+            }
+
+            .our-plans-background {
+                background-size: cover;
+                width: 700px;
+                height: 300px;
+            }
+
+            .center-light-card-master {
+                width: 100%;
+            }
+
+            .center-text#fifth {
+                font-size: 30px;
+            }
+
+            .card-benefits-text {
+                font-size: 16px;
+            }
+
+            .our-plan-cards {
+                width: 90%;
+                grid-template-columns: repeat(1, 100%);
+            }
+
+            .our-plan-background {
+                height: 1700px;
+            }
+
+            .our-plans-right {
+                width: 0%;
+            }
+
+            .our-plans-left {
+                width: 0%;
+            }
+
+            .our-plans-left-light {
+                position: relative;
+                width: 50%;
+                height: 200px;
+                background: url(images/AlUU80ePWWBn9KNSPihCaYtCBJY.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: 30px;
+                background-position-x: right;
+                margin-right: 0px;
+                transform: rotateX(180deg);
+            }
+
+            .our-plans-right-light {
+                transform: rotateX(180deg);
+                position: relative;
+                width: 50%;
+                margin-top: 30px;
+                height: 50%;
+                margin-left: 0px;
+                left: 0;
+                background-position-x: unset;
+                background-size: cover;
+            }
+
+            .our-plans-center {
+                width: 90%;
+                margin-top: 100px;
+            }
+
+            .our-plans-blue-background {
+                margin-top: 1350px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .swiper-slide-active.flipped .front {
+                top: 58px
+            }
+
             .our-icons-1200 {
                 align-items: flex-start;
             }
@@ -2530,11 +2816,13 @@
                 font-size: 14px;
                 line-height: 1.5;
                 font-weight: 500;
-                width: 80%;
+                width: 100%;
+                top: 28%
             }
 
             .swiper-slide-active .back {
                 height: 250px;
+                top: 58px;
             }
 
             .swiper-slide-active .front p {
@@ -2557,6 +2845,11 @@
 
             .swiper {
                 top: -50px;
+            }
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
             }
 
             .center-text {
@@ -2679,27 +2972,34 @@
                 background-position: unset;
             }
 
-            #stars {
+            .stars {
                 width: 0.33px;
                 height: 1px;
                 animation: animStar 25s linear infinite;
             }
 
-            #stars2 {
+            .stars2 {
                 width: 0.33px;
                 height: 1px;
                 animation: animStar 25s linear infinite;
             }
 
-            #stars3 {
+            .stars3 {
                 display: unset;
                 width: 0.33px;
                 height: 1px;
                 animation: animStar3 7s linear infinite;
             }
 
-            #stars4 {
+            .stars3#stars4 {
                 display: none;
+            }
+
+            .stars22 {
+                display: unset;
+                top: 6000px;
+                height: 1px;
+                animation: animStar 25s linear infinite;
             }
 
             .rainbow {
@@ -2772,7 +3072,7 @@
 
     <!-- Fundo de estrelas -->
     <section class="wrapper">
-        <div id="stars"></div>
+        <div class="stars"></div>
         <div class="upper-hero-text-container">
             <div class="upper-hero-text">
                 <h1 id="appointment">
@@ -2997,7 +3297,8 @@
     </div>
     <div class="our-works">
         <div class="dark-blue-rainbow">
-            <div id="stars2"></div>
+            <div class="stars2"></div>
+            <div class="stars22"></div>
             <div class="upper-hero-text-container">
                 <div class="upper-hero-text" id="results2">
                     <h1 id="appointment2">
@@ -3023,7 +3324,7 @@
             <a class="project-card" href="https://dravaleskagarcia.com.br/" target="_blank" rel="noopener noreferrer">
                 <div class="video-card">
                     <div class="video-project">
-                        <video muted loop autoplay onmouseover class="video-content">
+                        <video muted loop autoplay playsinline onmouseover class="video-content">
                             <source src="videos/demo1.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos HTML5.
                         </video>
@@ -3044,7 +3345,7 @@
             <a class="project-card" href="https://drmarkuspaulo.com.br/" target="_blank" rel="noopener noreferrer">
                 <div class="video-card">
                     <div class="video-project">
-                        <video muted loop autoplay onmouseover class="video-content">
+                        <video muted loop autoplay playsinline onmouseover class="video-content">
                             <source src="videos/demo2.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos HTML5.
                         </video>
@@ -3065,7 +3366,7 @@
             <a class="project-card" href="https://drasamiastudart.com.br/" target="_blank" rel="noopener noreferrer">
                 <div class="video-card">
                     <div class="video-project">
-                        <video muted loop autoplay onmouseover class="video-content">
+                        <video muted loop autoplay playsinline onmouseover class="video-content">
                             <source src="videos/demo3.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos HTML5.
                         </video>
@@ -3086,7 +3387,7 @@
             <a class="project-card" href="https://draliviapolli.com/" target="_blank" rel="noopener noreferrer">
                 <div class="video-card">
                     <div class="video-project">
-                        <video muted loop autoplay onmouseover class="video-content">
+                        <video muted loop autoplay playsinline onmouseover class="video-content">
                             <source src="videos/demo4.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos HTML5.
                         </video>
@@ -3191,10 +3492,10 @@
             </div>
         </div>
     </div>
-    <div id="stars3"></div>
+    <div class="stars3"></div>
     <div class="our-method-background">
         <div class="our-method">
-            <div id="stars4"></div>
+            <div class="stars3" id="stars4"></div>
             <div class="upper-hero-text-container">
                 <div class="upper-hero-text" id="results2">
                     <h1 id="appointment2">
@@ -3309,8 +3610,8 @@
     </div>
     <div class="our-works">
         <div class="dark-blue-rainbow">
-            <div id="stars3"></div>
-            <div id="stars4"></div>
+            <div class="stars3"></div>
+            <div class="stars3" id="stars4"></div>
             <div class="upper-hero-text-container">
                 <div class="upper-hero-text" id="results2">
                     <h1 id="appointment2">
@@ -3523,26 +3824,29 @@
             </div>
         </div>
     </div>
-    <!-- <div class="our-plans-blue-background">
+    <div class="our-plans-blue-background">
         <div class=" our-plans-background">
             <div class="our-plans-right"></div>
             <div class="our-plans-left"></div>
             <div class="our-plans-left-light"></div>
             <div class="our-plans-right-light"></div>
             <div class="our-plans-center">
-                <div class="upper-hero-text" id="results2">
-                    <h1 id="appointment2">
-                        Pacotes
-                    </h1>
+                <div class="upper-hero-text-container">
+                    <div class="upper-hero-text" id="results2">
+                        <h1 id="appointment2">
+                            Pacotes
+                        </h1>
+                    </div>
                 </div>
                 <div class="center-text" id="second">
                     <p>Nossos planos</p>
                 </div>
                 <div class="center-text" id="description-our-works">
+                    <div class="stars2"></div>
+                    <div class="stars22"></div>
                     <p>Oferecemos soluções completas para sua clínica ou consultório, desde um site
                         profissional <br>até estratégias de marketing digital que atraem
                         pacientes reais.</p>
-                    <div id="stars2"></div>
                 </div>
                 <div class="center-text" id="description-our-mobile">
                     <p>Oferecemos soluções completas para sua clínica ou consultório, desde um site
@@ -3555,16 +3859,458 @@
     <div class="our-plan-background">
         <div class="our-plan-cards">
             <div class="our-plan-card">
-
+                <div class="center-light-card-master"></div>
+                <div class="center-text" id="fifth">
+                    <p>Plano Básico</p>
+                </div>
+                <div class="card-line"></div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Site profissional com um design que transparece excelência
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Identidade visual e criação de logo (caso não exista)
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Suporte por WhatsApp sempre a sua disposição
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        3 contas de E-mail profissional
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Relatório de visitas mensais no site
+                    </div>
+                </div>
+                <div class="shiny-cta-container">
+                    <button class="shiny-cta">
+                        <span>Solicitar orçamento</span>
+                    </button>
+                </div>
+                <div class="video-card-master">
+                    <div class="video-card-master-container">
+                        <video class="video-card-master2" src="videos/YVgivPQDfzSF3fNPbuzKR87U4.mp4" loop=""
+                            preload="auto" muted="" playsinline="" autoplay=""></video>
+                    </div>
+                    <div class="back1"></div>
+                    <div class="back2"></div>
+                </div>
+            </div>
+            <div class="our-plan-card" id="master">
+                <div class="left-light-card-master"></div>
+                <div class="right-light-card-master"></div>
+                <div class="center-text" id="fifth">
+                    <p>Plano Master</p>
+                </div>
+                <div class="card-line"></div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Tudo incluso do plano básico
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Geração de novos pacientes por anúncios no google
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Cadastro profissional no google meu negócio
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Consultoria de marketing
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Relatório mensal de performance no site (cliques, visualizações e conversões)
+                    </div>
+                </div>
+                <div class="shiny-cta-container">
+                    <button class="shiny-cta">
+                        <span>Solicitar orçamento</span>
+                    </button>
+                </div>
+                <div class="video-card-master">
+                    <div class="video-card-master-container">
+                        <video class="video-card-master2" src="videos/YVgivPQDfzSF3fNPbuzKR87U4.mp4" loop=""
+                            preload="auto" muted="" playsinline="" autoplay=""></video>
+                    </div>
+                    <div class="back1"></div>
+                    <div class="back2"></div>
+                </div>
             </div>
             <div class="our-plan-card">
-
-            </div>
-            <div class="our-plan-card">
-
+                <div class="center-light-card-master"></div>
+                <div class="center-text" id="fifth">
+                    <p>Plano Social Media</p>
+                </div>
+                <div class="card-line"></div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Planejamento estratégico
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Levantamento de Temas da Especialidade
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Criação Artes e dos Textos (legenda)
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Você escolhe: 1, 2, 3, 4... posts semanais
+                    </div>
+                </div>
+                <div class="card-benefits">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="30%" stop-color="white" />
+                                    <stop offset="80%" stop-color="#d5d8f6" />
+                                    <stop offset="100%" stop-color="#fdf7fe" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="url(#gradient)"
+                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z">
+                                </path>
+                                <path fill="url(#gradient)"
+                                    d="M10.5 16.5c-.42 0-.82-.176-1.094-.484l-2.963-2.97c-.274-.26-.443-.653-.443-1.06 0-.405.17-.798.462-1.078.482-.513 1.557-.55 2.113.037l1.925 1.93 4.943-4.958c.52-.55 1.575-.57 2.132.02.256.242.425.634.425 1.04 0 .402-.164.79-.45 1.068l-5.993 6.012c-.238.267-.637.443-1.057.443z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="card-benefits-text">
+                        Postagens no Instagram e Facebook
+                    </div>
+                </div>
+                <div class="shiny-cta-container">
+                    <button class="shiny-cta">
+                        <span>Solicitar orçamento</span>
+                    </button>
+                </div>
+                <div class="video-card-master">
+                    <div class="video-card-master-container">
+                        <video class="video-card-master2" src="videos/YVgivPQDfzSF3fNPbuzKR87U4.mp4" loop=""
+                            preload="auto" muted="" playsinline="" autoplay=""></video>
+                    </div>
+                    <div class="back1"></div>
+                    <div class="back2"></div>
+                </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <script>
         // Menu mobile
