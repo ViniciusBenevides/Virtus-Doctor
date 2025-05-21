@@ -679,3 +679,62 @@ textarea,
 .swiper-slide-active.flipped .back {
     opacity: 1 !important;
 }
+
+/* Estilos para o efeito hover nos cards de comparação */
+.comparision-versus-bottom-left-card,
+.comparision-versus-bottom-right-card {
+    position: relative;
+    /* Necessário para o posicionamento absoluto do pseudo-elemento */
+    overflow: hidden;
+    /* Para garantir que o efeito de máscara não vaze */
+    /* Outros estilos que você já tem para estes cards permanecem */
+}
+
+/* Pseudo-elemento para criar o efeito de overlay */
+.comparision-versus-bottom-left-card::before,
+.comparision-versus-bottom-right-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Cobre toda a div pai (top: 0; right: 0; bottom: 0; left: 0;) */
+    pointer-events: none;
+    /* Permite que o mouse interaja com o conteúdo abaixo do overlay */
+
+    /* Variáveis CSS controladas pelo JavaScript */
+    opacity: var(--card-hover-opacity, 0);
+    /* Começa invisível */
+
+    /* A máscara radial que segue o mouse */
+    -webkit-mask: radial-gradient(20rem 20rem at var(--card-hover-x, 50%) var(--card-hover-y, 50%),
+            /* Ajuste o tamanho do raio (20rem) conforme necessário */
+            black 1%,
+            /* Cor da máscara, pode ser qualquer cor sólida */
+            transparent 90%
+            /* Torna transparente gradualmente */
+        );
+    mask: radial-gradient(20rem 20rem at var(--card-hover-x, 50%) var(--card-hover-y, 50%),
+            black 1%,
+            transparent 90%);
+
+    transition: opacity 0.3s ease-out;
+    /* Transição suave para a opacidade */
+    will-change: opacity;
+    /* Otimização para a animação de opacidade */
+    z-index: 0;
+    /* Ajuste se necessário para ficar acima do conteúdo de fundo do card, mas abaixo de texto/icones dentro dele. */
+    /* Se o conteúdo dos cards for simples, z-index:0 ou 1 deve funcionar. */
+    /* Se tiver elementos interativos DENTRO dos cards, este z-index deve ser baixo */
+    /* e os elementos interativos com z-index maior e position relative. */
+}
+
+/* Cor específica para o card da esquerda */
+.comparision-versus-bottom-left-card::before {
+    background-color: rgba(255, 0, 0, 0.25);
+    /* Vermelho com opacidade */
+}
+
+/* Cor específica para o card da direita */
+.comparision-versus-bottom-right-card::before {
+    background-color: rgba(0, 100, 255, 0.25);
+    /* Azul com opacidade */
+}
