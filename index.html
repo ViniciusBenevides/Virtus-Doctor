@@ -32,6 +32,132 @@
             height: 100%;
         }
 
+        .footer-text {
+            text-shadow: 0 0 black;
+            width: 100%;
+            text-align: center;
+            margin-top: 0px;
+            font-family: inherit;
+            font-size: 16px;
+            text-wrap: wrap;
+            font-weight: 400;
+            color: #c1c4cc;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 10%;
+            padding-left: 10%;
+            position: relative;
+            z-index: 99;
+            line-height: 1.4;
+        }
+
+        .footer-section-image-container {
+            position: absolute;
+            border-radius: inherit;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-section-video-container6 {
+            aspect-ratio: 1.88;
+            flex: none;
+            gap: 0px;
+            height: 272px;
+            left: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            transform: translate(-50%);
+            width: 513px;
+            z-index: 1;
+        }
+
+        .footer-section-video-container5 {
+            display: contents;
+        }
+
+        .footer-section-video-container4 {
+            background: radial-gradient(63.13% 100% at 50% 0%, #00020f00, #00020f 75.28%);
+            flex: none;
+            gap: 0px;
+            inset: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .footer-section-video-container3 {
+            background-color: #11133999;
+            flex: none;
+            gap: 0px;
+            inset: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .footer-section-video-container2 {
+            aspect-ratio: 3 / 1;
+            bottom: var(--framer-aspect-ratio-supported, 0px);
+            flex: none;
+            left: 50%;
+            opacity: .6;
+            position: absolute;
+            top: 0;
+            transform: translate(-50%);
+            width: 100%;
+            z-index: 1;
+        }
+
+        .footer-section-video-container {
+            flex: none;
+            height: 100.8px;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .footer-section-top-line {
+            background: linear-gradient(90deg, #fff0, #ffffff26 48.64%, #fff0);
+            flex: none;
+            height: 1px;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .footer-section-container {
+            background-color: #00020f;
+        }
+
+        .footer-section {
+            border-top: 1px solid #000000;
+            align-content: center;
+            align-items: center;
+            background: radial-gradient(51.25% 100% at 50% 0%, #000319, #00020f 63.31%);
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 40px;
+            height: min-content;
+            justify-content: flex-start;
+            overflow: visible;
+            padding: 100px 0 0;
+            position: relative;
+            width: 100%;
+        }
+
         #comparision-logo {
             display: block;
             width: 70%;
@@ -2915,6 +3041,25 @@
         }
 
         @media (max-width: 768px) {
+            .footer-section-video-container6 {
+                aspect-ratio: 1.9211822660098523 / 1;
+                height: var(--framer-aspect-ratio-supported, 179px);
+                width: 100%;
+            }
+
+            .footer-section-video-container4 {
+                aspect-ratio: 1.9211822660098523 / 1;
+                bottom: var(--framer-aspect-ratio-supported, 0px);
+                height: 203px;
+            }
+
+            .footer-section-video-container3 {
+                aspect-ratio: 1.9211822660098523 / 1;
+                bottom: var(--framer-aspect-ratio-supported, 0px);
+                height: 203px;
+                mix-blend-mode: color;
+            }
+
             .video-card-master {
                 opacity: 1;
             }
@@ -4768,7 +4913,6 @@
     <div class="our-works" id="comparision">
         <div class="dark-blue-rainbow">
             <div class="stars3"></div>
-            <div class="stars3" id="stars4"></div>
             <div class="upper-hero-text-container">
                 <div class="upper-hero-text" id="results2">
                     <h1 id="appointment2">
@@ -5133,6 +5277,36 @@
                             <div class="card-benefits-text">
                                 Ajustes rápidos direto no código
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-section-container">
+        <div class="footer-section">
+            <div class="footer-section-top-line"></div>
+            <div class="footer-section-video-container">
+                <div class="footer-section-video-container2">
+                    <video src="https://framerusercontent.com/assets/vdo7vl69SSTV5arCTIp5d25ciuQ.mp4" loop=""
+                        preload="auto" muted="" playsinline=""
+                        style="cursor:auto;width:100%;height:100%;border-radius:0px;display:block;object-fit:cover;background-color:rgb(17, 19, 57);object-position:50% 50%"
+                        autoplay=""></video>
+                </div>
+                <div class="footer-text">
+                    © Virtus Doctor, Todos os Direitos Reservados.
+                </div>
+                <div class="footer-section-video-container3"></div>
+                <div class="footer-section-video-container4"></div>
+                <div class="footer-section-video-container5">
+                    <div class="footer-section-video-container6">
+                        <div class="footer-section-image-container">
+                            <img decoding="async" loading="lazy" width="513" height="272"
+                                sizes="min(100vw * 0.88, 450px)"
+                                srcset="https://framerusercontent.com/images/eVPQSYBoVqwchmpN78sjyYtovY.svg?scale-down-to=512 512w,https://framerusercontent.com/images/eVPQSYBoVqwchmpN78sjyYtovY.svg 513w"
+                                src="https://framerusercontent.com/images/eVPQSYBoVqwchmpN78sjyYtovY.svg"
+                                alt="background Grid"
+                                style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover">
                         </div>
                     </div>
                 </div>
