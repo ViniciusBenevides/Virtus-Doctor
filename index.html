@@ -461,7 +461,8 @@
         }
 
         .comparision-versus-upper1 {
-            align-items: center;
+            align-items: flex-end;
+            margin-right: 100px;
             display: flex;
             flex: 1 0 0px;
             flex-direction: column;
@@ -1357,6 +1358,7 @@
         .project-card-under-text {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .center-button {
@@ -1375,6 +1377,8 @@
             margin: 10px;
             text-align: unset;
             font-size: 22px;
+            left: unset;
+            transform: unset;
         }
 
         .center-text#fourth {
@@ -1965,6 +1969,7 @@
 
         .hero-text h1 {
             text-align: center;
+            width: 1200px;
             /* Base Styles */
             background: linear-gradient(to bottom right,
                     white 30%,
@@ -2730,7 +2735,7 @@
             background-position: 50%;
             height: 1000px;
             top: 0;
-            background-image: url('images/planet-light-energy-blue23.png');
+            background-image: url(images/planet-light-energy-blue-v4.png);
             background-size: cover;
             pointer-events: none;
             /* Permite cliques nos elementos abaixo */
@@ -2780,6 +2785,19 @@
 
 
         /* === RESPONSIVIDADE === */
+        @media (min-width: 1536px) {
+            .our-plans-blue-background {
+                height: 460px;
+            }
+
+            .right-light {
+                background-position-x: right;
+            }
+
+            .left-light {
+                background-position-x: left;
+            }
+        }
 
         @media (max-width: 1450px) {
             .hero-text h1 {
@@ -2789,6 +2807,82 @@
 
         /* Menu */
         @media (max-width: 1220px) {
+            .hero-text h1 {
+                width: 90%;
+            }
+
+            .our-plans-center {
+                width: 90%;
+            }
+
+            .comparision-background {
+                margin-top: 900px;
+            }
+
+            .our-works#comparision {
+                margin-top: 620px;
+            }
+
+            .our-plan-background {
+                height: 620px;
+            }
+
+            .center-text {
+                position: relative;
+                width: fit-content;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #exception {
+                left: unset;
+                transform: unset;
+                width: unset;
+            }
+
+            .our-plans-blue-background {
+                margin-top: 800px;
+            }
+
+            .our-plans-right {
+                width: 0%;
+            }
+
+            .our-plans-left {
+                width: 0%;
+            }
+
+            .page-wrapper {
+                height: 1500px;
+            }
+
+            .comparision-versus-upper {
+                width: 90%;
+            }
+
+            .center-light-card-master {
+                width: 100%;
+            }
+
+            .comparision-versus-bottom {
+                width: 90%;
+            }
+
+            .our-plan-cards {
+                width: 90%;
+                grid-template-columns: repeat(3, 32%);
+                grid-gap: 2%;
+            }
+
+            .center-text#fifth {
+                text-wrap: auto;
+            }
+
+            .our-plan-card {
+                height: unset;
+                padding-bottom: 40px;
+            }
+
             .our-icons {
                 justify-content: center;
                 height: 560px;
@@ -2852,6 +2946,55 @@
         }
 
         @media (max-width: 992px) {
+            .comparision-versus-upper2#upper2-logo {
+                padding-right: 0;
+            }
+
+            .our-plan-background {
+                height: 1200px;
+            }
+
+            .our-works#comparision {
+                margin-top: 1200px;
+            }
+
+            .comparision-background {
+                margin-top: 1480px;
+            }
+
+            .center-text#description-our-works {
+                display: none;
+            }
+
+            .center-text#description-our-mobile {
+                display: block;
+                text-shadow: 0 0 black;
+                position: relative;
+                width: fit-content;
+                text-align: center;
+                margin-top: 0px;
+                font-family: inherit;
+                font-size: 18px;
+                text-wrap: wrap;
+                font-weight: 400;
+                color: #6D7792;
+                line-height: 1.4;
+            }
+
+            .page-wrapper {
+                height: 1750px;
+            }
+
+            .timeline_date-text {
+                font-size: 36px;
+            }
+
+            .our-plan-cards {
+                width: 90%;
+                grid-template-columns: repeat(2, 48%);
+                grid-gap: 4%;
+            }
+
             .video-card {
                 height: 385px;
             }
@@ -2906,6 +3049,7 @@
 
             .hero-text h1 {
                 font-size: 50px;
+                width: 90%;
             }
 
             .subtitle {
@@ -3041,20 +3185,24 @@
         }
 
         @media (max-width: 768px) {
+            .comparision-versus-upper1 {
+                margin-right: 50px;
+            }
+
             .footer-section-video-container6 {
-                aspect-ratio: 1.9211822660098523 / 1;
+                width: inherit;
                 height: 179px;
                 width: 100%;
             }
 
             .footer-section-video-container4 {
-                aspect-ratio: 1.9211822660098523 / 1;
+                width: inherit;
                 bottom: 0;
                 height: 203px;
             }
 
             .footer-section-video-container3 {
-                aspect-ratio: 1.9211822660098523 / 1;
+                width: inherit;
                 bottom: 0;
                 height: 203px;
                 mix-blend-mode: color;
@@ -3094,7 +3242,6 @@
             }
 
             #comparision-logo {
-                margin-left: 25px;
                 width: 55%;
             }
 
@@ -3681,7 +3828,7 @@
         </div>
         <div class="hero-text">
             <h1>
-                Se um site trouxesse <span class="text-blue">+30 pacientes</span><br> por mês, valeria o investimento?
+                Se um site trouxesse <span class="text-blue">+30 pacientes</span> por mês, valeria o investimento?
             </h1>
             <p class="subtitle">
                 Tenha uma equipe de marketing especializada para seu sucesso.
@@ -3732,7 +3879,7 @@
                         Cases de sucesso
                     </h1>
                 </div>
-                <div class="center-text">
+                <div class="center-text" id="exception">
                     <p>Nossos números</p>
                 </div>
                 <div class="center-text" id="description">
@@ -4204,7 +4351,7 @@
                     <div class="overlay-fade-bottom"></div>
                 </div>
             </div>
-            <div style="height: 10vh; background-color: #00020f;"></div>
+            <div style="height: 50vh; background-color: #00020f;"></div>
         </div>
     </div>
     <div class="our-works">
@@ -4448,6 +4595,7 @@
                         pacientes reais.</p>
                 </div>
                 <div class="center-text" id="description-our-mobile">
+                    <div class="stars2"></div>
                     <p>Oferecemos soluções completas para sua clínica ou consultório, desde um site
                         profissional até estratégias de marketing digital que atraem
                         pacientes reais.</p>
