@@ -4,8 +4,6 @@
     src: local('Gilroy Semibold'),
         /* Tenta local primeiro */
         local('Gilroy-Semibold'),
-        /* Adicione WOFF2 se tiver, é o mais moderno e comprimido */
-        url('Gilroy-SemiBold.woff2') format('woff2'),
         /* Corrija o nome do arquivo aqui se for diferente */
         url('Gilroy-SemiBold.woff') format('woff'),
         /* Corrija o nome do arquivo aqui se for diferente */
@@ -13,6 +11,7 @@
     /* Nome corrigido para corresponder ao arquivo físico */
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 body,
