@@ -1,10 +1,16 @@
 @font-face {
     font-family: 'Gilroy';
-    src: url('Gilroy-Semibold.eot');
-    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
-        url('Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
-        url('Gilroy-Semibold.woff') format('woff'),
-        url('Gilroy-Semibold.ttf') format('truetype');
+    /* Mesmo nome de família para todas as variações */
+    src: local('Gilroy Semibold'),
+        /* Tenta local primeiro */
+        local('Gilroy-Semibold'),
+        /* Adicione WOFF2 se tiver, é o mais moderno e comprimido */
+        url('Gilroy-SemiBold.woff2') format('woff2'),
+        /* Corrija o nome do arquivo aqui se for diferente */
+        url('Gilroy-SemiBold.woff') format('woff'),
+        /* Corrija o nome do arquivo aqui se for diferente */
+        url('Gilroy-SemiBold.ttf') format('truetype');
+    /* Nome corrigido para corresponder ao arquivo físico */
     font-weight: 600;
     font-style: normal;
 }
