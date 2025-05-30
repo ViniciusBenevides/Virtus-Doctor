@@ -1028,10 +1028,10 @@ textarea {
     flex-shrink: 0;
     transform: none;
     flex: none;
-    height: 30px;
+    height: 23px;
     position: relative;
     white-space: pre-wrap;
-    width: 30px;
+    width: 35px;
     word-break: break-word;
     word-wrap: break-word
 }

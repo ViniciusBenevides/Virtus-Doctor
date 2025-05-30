@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // ============ SWIPER ============
     const initSwiper = () => {
         const swiperEl = document.querySelector('.swiper');
         if (!swiperEl) return;
@@ -73,13 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
         flipActiveSlide();
     };
 
-    // ============ MENU MOBILE ============
     const initMobileMenu = () => {
         const menuIcon = document.querySelector('#menu-icon');
         const navbar = document.querySelector('.navbar');
         if (!menuIcon || !navbar) return;
 
-        // Ícones SVG como strings
         const menuIconSVG = `
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
@@ -93,13 +90,13 @@ document.addEventListener('DOMContentLoaded', function () {
         </svg>
     `;
 
-        // Inicializa com o ícone de menu
+
         menuIcon.innerHTML = menuIconSVG;
 
         menuIcon.addEventListener('click', () => {
             const isActive = navbar.classList.toggle('active');
 
-            // Alterna entre os ícones
+
             menuIcon.innerHTML = isActive ? closeIconSVG : menuIconSVG;
             menuIcon.classList.toggle('active');
 
@@ -133,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setupHoverEffect('.card2');
     };
 
-    // ============ ANIMAÇÕES ============
+
     const initAnimations = () => {
         // Animação de contagem
         const animateCountUp = (targetElement, finalValue, suffix = '', duration = 2000) => {
