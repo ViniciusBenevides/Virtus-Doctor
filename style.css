@@ -14,6 +14,7 @@
     font-display: swap;
 }
 
+
 body,
 body.light {
     --card-box-shadow-1-y: 3px;
@@ -444,31 +445,31 @@ html {
     --shiny-cta-bg-subtle: #131839;
     --shiny-cta-fg: #ffffff;
     --shiny-cta-highlight: rgb(7, 7, 135);
-    --shiny-cta-highlight-subtle: #8484ff
+    --shiny-cta-highlight-subtle: #8484ff;
 }
 
 @property --gradient-angle {
     syntax: "<angle>";
     initial-value: 0deg;
-    inherits: false
+    inherits: false;
 }
 
 @property --gradient-angle-offset {
     syntax: "<angle>";
     initial-value: 0deg;
-    inherits: false
+    inherits: false;
 }
 
 @property --gradient-percent {
     syntax: "<percentage>";
     initial-value: 5%;
-    inherits: false
+    inherits: false;
 }
 
 @property --gradient-shine {
     syntax: "<color>";
     initial-value: white;
-    inherits: false
+    inherits: false;
 }
 
 .shiny-cta {
@@ -476,67 +477,139 @@ html {
     --duration: 3s;
     --shadow-size: 2px;
     isolation: isolate;
+    position: relative;
+    z-index: 99;
     overflow: hidden;
     cursor: pointer;
     outline-offset: 4px;
     padding: 1rem 2.5rem;
+    font-family: inherit;
     font-size: 1.125rem;
     line-height: 1.2;
     border: 1px solid transparent;
     border-radius: 360px;
     color: var(--shiny-cta-fg);
-    background: linear-gradient(var(--shiny-cta-bg), var(--shiny-cta-bg)) padding-box, conic-gradient(from calc(var(--gradient-angle) - var(--gradient-angle-offset)), transparent, var(--shiny-cta-highlight) var(--gradient-percent), var(--gradient-shine) calc(var(--gradient-percent) * 2), var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3), transparent calc(var(--gradient-percent) * 4)) border-box;
+    background: linear-gradient(var(--shiny-cta-bg), var(--shiny-cta-bg)) padding-box,
+        conic-gradient(from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+            transparent,
+            var(--shiny-cta-highlight) var(--gradient-percent),
+            var(--gradient-shine) calc(var(--gradient-percent) * 2),
+            var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3),
+            transparent calc(var(--gradient-percent) * 4)) border-box;
     box-shadow: inset 0 0 0 1px var(--shiny-cta-bg-subtle);
-    --transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
-    transition: var(--transition);
-    transition-property: --gradient-angle-offset, --gradient-percent, --gradient-shine
+
+    &::before,
+    &::after,
+    span::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        inset-inline-start: 50%;
+        inset-block-start: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+    }
+
+    &:active {
+        translate: 0 1px;
+    }
 }
 
+/* Dots pattern */
 .shiny-cta::before {
     --size: calc(100% - var(--shadow-size) * 3);
     --position: 2px;
     --space: calc(var(--position) * 2);
     width: var(--size);
     height: var(--size);
-    background: radial-gradient(circle at var(--position) var(--position), #fff calc(var(--position)/ 4), transparent 0) padding-box;
+    background: radial-gradient(circle at var(--position) var(--position),
+            white calc(var(--position) / 4),
+            transparent 0) padding-box;
     background-size: var(--space) var(--space);
     background-repeat: space;
-    mask-image: conic-gradient(from calc(var(--gradient-angle) + 45deg), black, transparent 10% 90%, black);
+    mask-image: conic-gradient(from calc(var(--gradient-angle) + 45deg),
+            black,
+            transparent 10% 90%,
+            black);
     border-radius: inherit;
-    opacity: .4;
-    z-index: -1
+    opacity: 0.4;
+    z-index: -1;
 }
 
+/* Inner shimmer */
 .shiny-cta::after {
     --animation: shimmer linear infinite;
     width: 100%;
     aspect-ratio: 1;
-    background: linear-gradient(-50deg, transparent, var(--shiny-cta-highlight), transparent);
+    background: linear-gradient(-50deg,
+            transparent,
+            var(--shiny-cta-highlight),
+            transparent);
     mask-image: radial-gradient(circle at bottom, transparent 40%, black);
-    opacity: .6
+    opacity: 0.6;
 }
 
 .shiny-cta span {
-    z-index: 1
+    z-index: 1;
+
+    &::before {
+        --size: calc(100% + 1rem);
+        width: var(--size);
+        height: var(--size);
+        box-shadow: inset 0 -1ex 2rem 4px var(--shiny-cta-highlight);
+        opacity: 0;
+    }
+}
+
+/* Animate */
+.shiny-cta {
+    --transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
+    transition: var(--transition);
+    transition-property: --gradient-angle-offset, --gradient-percent,
+        --gradient-shine;
+
+    &,
+    &::before,
+    &::after {
+        animation: var(--animation) var(--duration),
+            var(--animation) calc(var(--duration) / 0.4) reverse paused;
+        animation-composition: add;
+    }
+
+    span::before {
+        transition: opacity var(--transition);
+        animation: calc(var(--duration) * 1.5) breathe linear infinite;
+    }
 }
 
 .shiny-cta:is(:hover, :focus-visible) {
     --gradient-percent: 20%;
     --gradient-angle-offset: 95deg;
-    --gradient-shine: var(--shiny-cta-highlight-subtle)
+    --gradient-shine: var(--shiny-cta-highlight-subtle);
+
+    &,
+    &::before,
+    &::after {
+        animation-play-state: running;
+    }
+
+    span::before {
+        opacity: 1;
+    }
 }
 
 @keyframes gradient-angle {
     to {
-        --gradient-angle: 360deg
+        --gradient-angle: 360deg;
     }
 }
 
 @keyframes shimmer {
     to {
-        rotate: 360deg
+        rotate: 360deg;
     }
 }
+
 
 @keyframes breathe {
 
@@ -1215,7 +1288,9 @@ textarea {
     width: 200px;
     overflow: hidden;
     left: 0;
-    background: url(images/jUjkRLmhkhvppSSBYZOnxJasEk.svg)
+    background: url(images/jUjkRLmhkhvppSSBYZOnxJasEk_11zon.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .center-light-card-master {
@@ -1233,8 +1308,10 @@ textarea {
     width: 200px;
     overflow: hidden;
     right: 0;
-    background: url(images/iusiYcS9aOMP5Ql2hyyP0UJ6yP8.svg);
-    background-position-x: right
+    background: url(images/iusiYcS9aOMP5Ql2hyyP0UJ6yP8_11zon.webp);
+    background-position-x: right;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .shiny-cta-container {
