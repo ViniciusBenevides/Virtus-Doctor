@@ -1,14 +1,7 @@
 @font-face {
     font-family: 'Gilroy';
-    /* Mesmo nome de família para todas as variações */
     src: local('Gilroy Semibold'),
-        /* Tenta local primeiro */
-        local('Gilroy-Semibold'),
-        /* Corrija o nome do arquivo aqui se for diferente */
-        url('Gilroy-SemiBold.woff') format('woff'),
-        /* Corrija o nome do arquivo aqui se for diferente */
         url('Gilroy-SemiBold.ttf') format('truetype');
-    /* Nome corrigido para corresponder ao arquivo físico */
     font-weight: 600;
     font-style: normal;
     font-display: swap;
