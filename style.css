@@ -2880,12 +2880,12 @@ img {
         margin-top: 20px;
         padding: 7px 9px;
         font-size: 14px;
-        width: 113.65px;
+        width: 118px;
         height: 37.6px;
     }
 
     .project-card:hover .view-project {
-        margin-left: 55%;
+        margin-left: 50%;
         margin-top: 20px;
         padding: 7px 9px;
         font-size: 14px
