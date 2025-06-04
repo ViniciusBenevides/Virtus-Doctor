@@ -1,3 +1,20 @@
+window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    const mainContent = document.getElementById('main-content');
+    const body = document.body;
+
+    body.classList.add('preloading'); // Adiciona a classe para esconder overflow
+
+    // Após o carregamento, esconde o preloader e mostra o conteúdo
+    if (preloader) {
+        preloader.classList.add('hidden'); // Adiciona classe para transição de desaparecimento
+    }
+    if (mainContent) {
+        mainContent.style.display = 'block'; // Mostra o conteúdo principal
+    }
+    body.classList.remove('preloading'); // Remove a classe para restaurar o scroll
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const initSwiper = () => {
         const swiperEl = document.querySelector('.swiper');
