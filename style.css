@@ -2200,7 +2200,7 @@ img {
 }
 
 .swiper-slide img {
-    object-fit: fill;
+    object-fit: unset;
     height: 350px;
     border-radius: 30px;
     pointer-events: none;
@@ -2954,7 +2954,7 @@ img {
     }
 
     .swiper-slide img {
-        object-fit: fill;
+        object-fit: unset;
         height: 250px;
         border-radius: 30px;
         pointer-events: none;
