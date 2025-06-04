@@ -2200,8 +2200,8 @@ img {
 }
 
 .swiper-slide img {
-    object-fit: unset;
-    height: 350px;
+    object-fit: cover;
+    /* height: 350px; */
     border-radius: 30px;
     pointer-events: none;
     border: 3px solid #4d60a5
@@ -2954,7 +2954,7 @@ img {
     }
 
     .swiper-slide img {
-        object-fit: unset;
+        object-fit: fill;
         height: 250px;
         border-radius: 30px;
         pointer-events: none;
