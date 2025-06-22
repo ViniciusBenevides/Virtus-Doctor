@@ -336,3 +336,45 @@ document.addEventListener('DOMContentLoaded', () => {
         rightComparisonCard.addEventListener("pointerleave", removeComparisonHoverEffect);
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Função para pegar o GCLID da URL da página
+    function getGclid() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('gclid');
+    }
+
+    const gclid = getGclid();
+
+    // Se não houver GCLID, não faz nada
+    if (!gclid) {
+        return;
+    }
+
+    // Seleciona todos os links que apontam para o WhatsApp
+    const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+
+    whatsappLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault(); // Impede a navegação imediata
+
+            let originalHref = this.getAttribute('href');
+            let messagePart = originalHref.split('text=')[1] || '';
+            let decodedMessage = decodeURIComponent(messagePart);
+
+            // Adiciona o GCLID à mensagem
+            const gclidText = ` [GCLID: ${gclid}]`;
+
+            // Verifica se o GCLID já não foi adicionado
+            if (!decodedMessage.includes('[GCLID:')) {
+                decodedMessage += gclidText;
+            }
+
+            // Remonta o link com a mensagem atualizada
+            const newHref = `https://wa.me/5562981752097?text=${encodeURIComponent(decodedMessage)}`;
+
+            // Abre o novo link
+            window.open(newHref, '_blank');
+        });
+    });
+});
