@@ -1,34 +1,33 @@
 # Virtus Doctor - Landing Page
 
-## 📸 Visualização do Projeto
+## 📸 Project Preview
+Below are previews of the main sections of the Landing Page.
 
-Abaixo estão as prévias das principais seções da Landing Page.
-
-### 1. Hero Section (Início)
+### 1. Hero Section
 ![Hero Section](./screenshots/hero.png)
 
-### 2. Cases de Sucesso (Slider)
-![Seção de Cases](./screenshots/cases.png)
+### 2. Success Cases (Slider)
+![Cases Section](./screenshots/cases.png)
 
-### 3. Portfólio (Vídeos)
-![Seção de Portfólio](./screenshots/portfolio.png)
+### 3. Portfolio (Videos)
+![Portfolio Section](./screenshots/portfolio.png)
 
-### 4. Dados
-![Seção Dados](./screenshots/dados.png)
+### 4. Data
+![Data Section](./screenshots/dados.png)
 
 ### 5. Timeline
-![Seção Timeline](./screenshots/timeline.png)
+![Timeline Section](./screenshots/timeline.png)
 
-### 6. Soluções
-![Seção Soluções](./screenshots/solucoes.png)
+### 6. Solutions
+![Solutions Section](./screenshots/solucoes.png)
 
-### 7. Planos
-![Seção de Planos](./screenshots/planos.png)
+### 7. Plans
+![Plans Section](./screenshots/planos.png)
 
-### 8. Porque nós?
-![Seção de Porque nós?](./screenshots/porque.png)
+### 8. Why Us?
+![Why Us Section](./screenshots/porque.png)
 
-### 📱 Visualização Mobile
+### 📱 Mobile View
 <div style="display: flex; gap: 10px;">
   <img src="./screenshots/mobile-1.png" width="300" alt="Mobile Hero">
   <img src="./screenshots/mobile-2.png" width="300" alt="Mobile Menu">
@@ -36,44 +35,45 @@ Abaixo estão as prévias das principais seções da Landing Page.
 
 ---
 
-## 💻 Sobre o Projeto
+## 💻 About the Project
+This is a high-conversion Landing Page developed for **Virtus Doctor**, an agency specialized in medical marketing. The page's goal is to capture leads (doctors and clinics) interested in growing their digital presence.
 
-Esta é uma Landing Page de alta conversão desenvolvida para a **Virtus Doctor**, agência especializada em marketing médico. O objetivo da página é captar leads (médicos e clínicas) interessados em aumentar sua presença digital.
+The application is a static **Single Page Application (SPA)**, focused on:
 
-A aplicação é uma **Single Page Application (SPA)** estática, focada em:
-- **Performance:** Carregamento rápido e código limpo.
-- **Conversão:** CTAs estratégicos direcionando para o WhatsApp.
-- **Rastreamento:** Estrutura pronta para campanhas de tráfego pago (Google/Meta).
+- **Performance:** Fast loading and clean code.
+- **Conversion:** Strategic CTAs directing users to WhatsApp.
+- **Tracking:** Structure ready for paid traffic campaigns (Google/Meta).
 
-## 🚀 Funcionalidades Principais
+## 🚀 Key Features
 
-- **Preloader Personalizado:** Animação de entrada enquanto os assets carregam.
-- **Design Responsivo:** Layout fluido que se adapta perfeitamente a qualquer tela.
-- **Carrossel Interativo:** Uso do **Swiper.js** para apresentar provas sociais.
-- **Vídeo Cards:** Portfólio com autoplay ao passar o mouse (desktop) ou visível (mobile).
-- **Integração com Analytics:** GTM e Meta Pixel configurados no `<head>`.
-- **Efeitos Visuais:** Animações de brilho, gradientes e elementos flutuantes (estrelas/luzes).
+- **Custom Preloader:** Entry animation while assets load.
+- **Responsive Design:** Fluid layout that adapts perfectly to any screen size.
+- **Interactive Carousel:** Uses **Swiper.js** to showcase social proof.
+- **Video Cards:** Portfolio with autoplay on hover (desktop) or always visible (mobile).
+- **Analytics Integration:** GTM and Meta Pixel configured in the `<head>`.
+- **Visual Effects:** Glow animations, gradients, and floating elements (stars/lights).
 
-## 🛠 Tecnologias Utilizadas
+## 🛠 Technologies Used
 
-- **HTML5:** Estrutura semântica.
-- **CSS3:** Animações (`@keyframes`), Flexbox, Grid e Media Queries.
-- **JavaScript:** Manipulação de DOM, lógica do menu mobile e preloader.
-- **Swiper.js:** Biblioteca de slider touch-friendly.
+- **HTML5:** Semantic structure.
+- **CSS3:** Animations (`@keyframes`), Flexbox, Grid, and Media Queries.
+- **JavaScript:** DOM manipulation, mobile menu logic, and preloader.
+- **Swiper.js:** Touch-friendly slider library.
 
-## 📂 Estrutura de Arquivos
+## 📂 File Structure
 
 ```text
 /
-├── images/                 # Diretório de imagens (webp, svg, logos)
-├── screenshots/            # Prints das telas usados neste README
-├── videos/                 # Vídeos de demonstração (cases de sucesso)
-├── .gitignore              # Arquivos ignorados pelo Git
-├── app.js                  # Lógica principal (menu mobile, preloader)
-├── favicon.ico             # Ícone da aba do navegador
-├── Gilroy-SemiBold.ttf     # Fonte tipográfica local
-├── index.html              # Estrutura HTML da Landing Page
-├── readme.md               # Documentação do projeto
-├── style.css               # Folha de estilos principal (CSS)
-├── swiper-bundle.min.css   # Estilização do slider (biblioteca)
-└── swiper-bundle.min.js    # Script do slider (biblioteca)
+├── images/                 # Image directory (webp, svg, logos)
+├── screenshots/            # Screen captures used in this README
+├── videos/                 # Demo videos (success cases)
+├── .gitignore              # Files ignored by Git
+├── app.js                  # Main logic (mobile menu, preloader)
+├── favicon.ico             # Browser tab icon
+├── Gilroy-SemiBold.ttf     # Local typography font
+├── index.html              # Landing Page HTML structure
+├── readme.md               # Project documentation
+├── style.css               # Main stylesheet (CSS)
+├── swiper-bundle.min.css   # Slider styling (library)
+└── swiper-bundle.min.js    # Slider script (library)
+```
